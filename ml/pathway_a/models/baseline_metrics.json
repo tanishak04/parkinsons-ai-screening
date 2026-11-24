@@ -1,0 +1,48 @@
+{
+  "model_stage": "stage_1_baseline",
+  "algorithm": "LogisticRegression (class_weight=balanced)",
+  "dataset": "UCI Parkinson's (parkinsons.data)",
+  "split_strategy": "StratifiedGroupKFold (participant-level, seed=42)",
+  "train_samples": 158,
+  "test_samples": 37,
+  "train_participants": 26,
+  "test_participants": 6,
+  "feature_names": [
+    "MDVP:Fo(Hz)",
+    "MDVP:Fhi(Hz)",
+    "MDVP:Flo(Hz)",
+    "MDVP:Jitter(%)",
+    "MDVP:Jitter(Abs)",
+    "MDVP:RAP",
+    "MDVP:PPQ",
+    "Jitter:DDP",
+    "MDVP:Shimmer",
+    "MDVP:Shimmer(dB)",
+    "Shimmer:APQ3",
+    "Shimmer:APQ5",
+    "MDVP:APQ",
+    "Shimmer:DDA",
+    "NHR",
+    "HNR",
+    "RPDE",
+    "DFA",
+    "spread1",
+    "spread2",
+    "D2",
+    "PPE"
+  ],
+  "metrics": {
+    "accuracy": 0.7027,
+    "precision": 0.8571,
+    "recall_sensitivity": 0.7742,
+    "specificity": 0.3333,
+    "f1_score": 0.8136,
+    "roc_auc": 0.7151
+  },
+  "confusion_matrix": {
+    "tn": 2,
+    "fp": 4,
+    "fn": 7,
+    "tp": 24
+  }
+}

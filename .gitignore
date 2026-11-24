@@ -221,3 +221,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Pathway A datasets and large model artifacts
+ml/pathway_a/data/raw/*
+!ml/pathway_a/data/raw/.gitkeep
+ml/pathway_a/data/processed/*
+!ml/pathway_a/data/processed/.gitkeep
+
+
+# Large model artifacts
+ml/pathway_a/models/*.joblib

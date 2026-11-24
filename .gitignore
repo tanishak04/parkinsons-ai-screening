@@ -231,3 +231,8 @@ ml/pathway_a/data/processed/*
 
 # Large model artifacts
 ml/pathway_a/models/*.joblib
+
+# Pathway B raw audio (large)
+ml/pathway_b/data/raw/**/*.wav
+ml/pathway_b/data/raw/**/*.mp3
+ml/pathway_b/models/*.joblib

@@ -215,9 +215,71 @@ parkinsons-ai-screening/
 
 ## How the Team Connects
 
-### During Development (Right Now)
+### Phase 1 — Right Now: Use the Mock Server (No Mohan needed)
 
-The ML model runs on **Mohan's local machine** and is exposed to the team via **ngrok**.
+> [!IMPORTANT]
+> **Backend and frontend devs: start here.** You do NOT need Mohan's machine or the real model to begin development. Run the mock server yourself locally.
+
+**Step 1 — Clone the repo and install dependencies:**
+```bash
+git clone <repo-url>
+cd parkinsons-ai-screening
+pip install flask flask-cors
+```
+
+**Step 2 — Run the mock server:**
+```bash
+python ml/pathway_a/mock_server.py
+```
+```
+🟡 MOCK MODEL SERVER — for development only
+  POST http://localhost:8001/predict
+  GET  http://localhost:8001/health
+  POST http://localhost:8001/predict/deterministic
+```
+
+**Step 3 — Set your backend env var to point at it:**
+```bash
+# backend/.env
+MODEL_SERVER_URL=http://localhost:8001
+```
+
+That's it. The mock server:
+- ✅ Validates all 22 required features (returns `422` if any are missing — same as real model)
+- ✅ Returns a realistic random prediction (`_mock: true` flag in the response)
+- ✅ Has a `/predict/deterministic` endpoint that always returns the same response — use this for writing tests
+- ✅ Has a `/health` endpoint to confirm it's running
+
+**Mock response includes `"_mock": true`** — your frontend can use this to show a "⚠️ Mock Mode" banner during development if you want.
+
+---
+
+### Phase 2 — Later Today: Switch to Mohan's Real Model
+
+When Mohan is ready, he will:
+1. Start `python ml/pathway_a/server.py` on his machine
+2. Run `ngrok http 8001` and share the public URL in team chat
+
+You just update **one line** in your `.env`:
+```bash
+# backend/.env  — only this line changes, nothing else
+MODEL_SERVER_URL=https://abc123.ngrok-free.app
+```
+
+Restart your backend server — done. The API contract is identical.
+
+> [!NOTE]
+> The ngrok URL changes each session. When Mohan shares a new URL, update `.env` and restart the backend. No code changes ever needed.
+
+---
+
+### Phase 3 — Production (Later)
+
+Once deployed, `MODEL_SERVER_URL` becomes the cloud URL. Same swap, same process.
+
+---
+
+### During Development (Mohan's machine)
 
 **What Mohan does:**
 ```bash

@@ -1,0 +1,98 @@
+{
+  "baseline_lr_22_LOGO": {
+    "inner_scores_mean": 2.0411378942497476,
+    "inner_scores_std": 4.095325148946932,
+    "outer_scores_mean": 1.7534056462340497,
+    "outer_scores_std": 3.6879256509301146,
+    "mean_ks_pvalue": 0.46325026734156943,
+    "min_ks_pvalue": 0.03145376904351161
+  },
+  "baseline_lr_22_SGKF_seed42": {
+    "inner_scores_mean": 1.979403638421719,
+    "inner_scores_std": 3.9894749393259983,
+    "outer_scores_mean": 1.9005190245128956,
+    "outer_scores_std": 3.888658527396389,
+    "mean_ks_pvalue": 0.7043113105751326,
+    "min_ks_pvalue": 0.5700717164592637
+  },
+  "baseline_lr_22_SGKF_seed123": {
+    "inner_scores_mean": 2.359651589043919,
+    "inner_scores_std": 4.644112392784882,
+    "outer_scores_mean": 1.969942214383636,
+    "outer_scores_std": 4.023000013103379,
+    "mean_ks_pvalue": 0.7330552851206191,
+    "min_ks_pvalue": 0.4552396479641014
+  },
+  "baseline_lr_22_SGKF_seed456": {
+    "inner_scores_mean": 2.261200221401548,
+    "inner_scores_std": 3.947294236073219,
+    "outer_scores_mean": 1.8376941668764246,
+    "outer_scores_std": 3.7838087004646312,
+    "mean_ks_pvalue": 0.4204370109907737,
+    "min_ks_pvalue": 0.09343942150332447
+  },
+  "baseline_lr_22_SGKF_seed789": {
+    "inner_scores_mean": 2.2227179237059462,
+    "inner_scores_std": 4.2945248492030395,
+    "outer_scores_mean": 2.002664567535309,
+    "outer_scores_std": 4.097030014895088,
+    "mean_ks_pvalue": 0.7958937904727904,
+    "min_ks_pvalue": 0.6642105108850159
+  },
+  "baseline_lr_22_SGKF_seed2024": {
+    "inner_scores_mean": 2.593923148120174,
+    "inner_scores_std": 4.732637063339059,
+    "outer_scores_mean": 1.8673191856851814,
+    "outer_scores_std": 3.7945770240929964,
+    "mean_ks_pvalue": 0.2863908780835228,
+    "min_ks_pvalue": 0.12275253447494812
+  },
+  "research_et_13_LOGO": {
+    "inner_scores_mean": 0.43158463532371427,
+    "inner_scores_std": 1.2034914892348543,
+    "outer_scores_mean": 0.5333957318828898,
+    "outer_scores_std": 1.4385744052107534,
+    "mean_ks_pvalue": 0.5442268734739176,
+    "min_ks_pvalue": 0.15456574615103755
+  },
+  "research_et_13_SGKF_seed42": {
+    "inner_scores_mean": 0.47993002152153585,
+    "inner_scores_std": 1.2040723845200536,
+    "outer_scores_mean": 0.5611555078882517,
+    "outer_scores_std": 1.4930661055434429,
+    "mean_ks_pvalue": 0.3454704927594423,
+    "min_ks_pvalue": 0.09343942150332447
+  },
+  "research_et_13_SGKF_seed123": {
+    "inner_scores_mean": 0.4640157005692785,
+    "inner_scores_std": 1.198535218455035,
+    "outer_scores_mean": 0.5313563535619737,
+    "outer_scores_std": 1.4033379561723667,
+    "mean_ks_pvalue": 0.7266790149810076,
+    "min_ks_pvalue": 0.30216638539349183
+  },
+  "research_et_13_SGKF_seed456": {
+    "inner_scores_mean": 0.5000278955966394,
+    "inner_scores_std": 1.2108502830552177,
+    "outer_scores_mean": 0.5843523993977534,
+    "outer_scores_std": 1.6781057388825802,
+    "mean_ks_pvalue": 0.48397056813730294,
+    "min_ks_pvalue": 0.09343942150332447
+  },
+  "research_et_13_SGKF_seed789": {
+    "inner_scores_mean": 0.4932462715970663,
+    "inner_scores_std": 1.217482293417499,
+    "outer_scores_mean": 0.5596445495096799,
+    "outer_scores_std": 1.5586400689313067,
+    "mean_ks_pvalue": 0.4455069211074562,
+    "min_ks_pvalue": 0.028323667449479888
+  },
+  "research_et_13_SGKF_seed2024": {
+    "inner_scores_mean": 0.5240467105494673,
+    "inner_scores_std": 1.2738082576200027,
+    "outer_scores_mean": 0.5974443480751092,
+    "outer_scores_std": 1.5638802623437547,
+    "mean_ks_pvalue": 0.4552357906298371,
+    "min_ks_pvalue": 0.24072242727460502
+  }
+}

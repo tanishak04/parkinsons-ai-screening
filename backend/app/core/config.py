@@ -15,7 +15,7 @@ class Settings(BaseSettings):
 
     model_server_url: AnyHttpUrl = "http://localhost:8001"
     model_server_timeout_seconds: float = Field(default=10.0, gt=0, le=120)
-    frontend_origins: str = "http://localhost:5173,http://localhost:3000"
+    frontend_origins: str = "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://127.0.0.1:3000"
     log_level: str = "INFO"
 
     @property

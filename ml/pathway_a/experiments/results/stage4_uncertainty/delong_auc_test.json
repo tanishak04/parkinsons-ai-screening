@@ -1,0 +1,12 @@
+{
+  "auc_model_a": 0.8073,
+  "auc_model_b": 0.7865,
+  "auc_difference": -0.0208,
+  "variance_difference": 0.003035,
+  "se_difference": 0.0551,
+  "z_statistic": -0.3781,
+  "p_value_delong": 0.7053,
+  "ci95_delong_lower": -0.1288,
+  "ci95_delong_upper": 0.0872,
+  "caveat": "DeLong assumes independent identically distributed sample vectors; cross-validation OOF predictions exhibit training-overlap covariance that can slightly underestimate variance."
+}

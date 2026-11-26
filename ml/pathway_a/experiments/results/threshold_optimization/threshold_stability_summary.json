@@ -1,0 +1,63 @@
+{
+  "threshold_stability": {
+    "baseline_0.50": {
+      "sgkf_mean": 0.5,
+      "sgkf_std": 0.0,
+      "sgkf_min": 0.5,
+      "sgkf_max": 0.5,
+      "logo_mean": 0.5,
+      "logo_std": 0.0,
+      "logo_min": 0.5,
+      "logo_max": 0.5
+    },
+    "youden_j": {
+      "sgkf_mean": 0.5902499999999999,
+      "sgkf_std": 0.11362302718944038,
+      "sgkf_min": 0.3,
+      "sgkf_max": 0.76,
+      "logo_mean": 0.579375,
+      "logo_std": 0.04924838297656534,
+      "logo_min": 0.45,
+      "logo_max": 0.69
+    },
+    "f1": {
+      "sgkf_mean": 0.3235,
+      "sgkf_std": 0.0833758865712291,
+      "sgkf_min": 0.15,
+      "sgkf_max": 0.51,
+      "logo_mean": 0.318125,
+      "logo_std": 0.0659147788019965,
+      "logo_min": 0.17,
+      "logo_max": 0.45
+    },
+    "f0_5": {
+      "sgkf_mean": 0.5547500000000001,
+      "sgkf_std": 0.11775653936874404,
+      "sgkf_min": 0.29,
+      "sgkf_max": 0.74,
+      "logo_mean": 0.578125,
+      "logo_std": 0.04868844335290492,
+      "logo_min": 0.45,
+      "logo_max": 0.69
+    },
+    "constrained_sens_875": {
+      "sgkf_mean": 0.4905000000000001,
+      "sgkf_std": 0.049559598930518464,
+      "sgkf_min": 0.38,
+      "sgkf_max": 0.62,
+      "logo_mean": 0.4503125,
+      "logo_std": 0.04908743844308058,
+      "logo_min": 0.27,
+      "logo_max": 0.53
+    }
+  },
+  "constraint_feasibility_rate": 1.0,
+  "logo_participant_transitions": {
+    "baseline_correct_count": 24,
+    "youden_correct_count": 20,
+    "constrained_correct_count": 25,
+    "healthy_false_alarms_baseline": 4,
+    "healthy_false_alarms_youden": 3,
+    "healthy_false_alarms_constrained": 4
+  }
+}

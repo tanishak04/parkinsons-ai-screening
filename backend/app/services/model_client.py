@@ -70,6 +70,26 @@ class ModelClient:
             raise InvalidModelResponse("Model server response must be a JSON object")
         return body
 
+    async def predict_et13(self, payload: dict[str, float]) -> dict[str, Any]:
+        """Request inference from the locked ET-13 pitch-free research candidate route."""
+        response = await self._request("POST", f"{self.settings.model_base_url}/predict/et13", json=payload)
+        if response.status_code >= 400:
+            try:
+                detail = response.json()
+            except ValueError:
+                detail = response.text
+            logger.warning("Model server rejected ET-13 prediction request (%s)", response.status_code)
+            raise ModelServerRejectedRequest(
+                f"Model server rejected the request: {detail}", status_code=502
+            )
+        try:
+            body = response.json()
+        except ValueError as exc:
+            raise InvalidModelResponse("Model server returned invalid JSON") from exc
+        if not isinstance(body, dict):
+            raise InvalidModelResponse("Model server response must be a JSON object")
+        return body
+
     async def health(self) -> tuple[bool, str | None]:
         response = await self._request("GET", f"{self.settings.model_base_url}/health")
         if response.status_code >= 400:

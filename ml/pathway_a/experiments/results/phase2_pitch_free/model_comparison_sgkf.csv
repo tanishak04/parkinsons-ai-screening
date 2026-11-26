@@ -1,0 +1,10 @@
+candidate_id,candidate_name,sgkf_bal_acc_mean,sgkf_bal_acc_std,sgkf_sensitivity_mean,sgkf_sensitivity_std,sgkf_specificity_mean,sgkf_specificity_std,sgkf_roc_auc_mean,sgkf_roc_auc_std,sgkf_f1_mean,sgkf_f1_std
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",0.777,0.1913,0.714,0.2134,0.84,0.3136,0.829,0.1652,0.7915,0.1713
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",0.774,0.2033,0.688,0.232,0.86,0.3069,0.841,0.1638,0.7737,0.1899
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",0.645,0.1851,0.69,0.1926,0.6,0.4082,0.749,0.1721,0.7459,0.138
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",0.634,0.1886,0.688,0.1965,0.58,0.4252,0.727,0.2,0.7407,0.1429
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",0.573,0.1754,0.906,0.1236,0.24,0.3266,0.583,0.2334,0.8409,0.0881
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",0.57,0.1619,0.94,0.1146,0.2,0.3227,0.604,0.2222,0.8532,0.0758
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",0.567,0.1968,0.774,0.2132,0.36,0.3958,0.732,0.1916,0.7692,0.1571
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",0.562,0.1753,0.924,0.1191,0.2,0.3227,0.772,0.1852,0.8443,0.0861
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",0.539,0.1299,0.918,0.103,0.16,0.238,0.714,0.1722,0.8383,0.0667

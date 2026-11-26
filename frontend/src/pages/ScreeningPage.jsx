@@ -89,21 +89,37 @@ export default function ScreeningPage() {
 
         <aside className="processing-panel" aria-labelledby="processing-title">
           <div className="processing-panel-top"><span className="processing-icon"><Info size={17} /></span><span className="processing-label">PROCESSING STATUS</span></div>
-          <h2 id="processing-title">{capability.loading ? 'Checking backend support' : capability.available ? 'Audio processing available' : 'Audio processing not connected'}</h2>
-          <p>{capability.loading
-            ? 'Checking whether the backend confirms compatible audio extraction.'
-            : capability.available
-              ? 'The backend reports audio extraction and model compatibility. You can submit a supported recording.'
-              : 'The current backend accepts numerical features only. It has not confirmed audio extraction compatible with the model.'}</p>
+          <h2 id="processing-title">
+            {capability.loading
+              ? 'Checking backend support'
+              : capability.available
+                ? (capability.screeningCompatible ? 'Audio screening available' : 'Research extraction active · Screening disabled')
+                : 'Audio processing not connected'}
+          </h2>
+          <p>
+            {capability.loading
+              ? 'Checking whether the backend confirms audio processing support.'
+              : capability.available
+                ? (capability.screeningCompatible
+                    ? 'The backend reports live screening model compatibility. You can submit a supported recording.'
+                    : 'Acoustic feature extraction is active for research inspection. Automated disease screening is disabled following validation review (model did not meet project targets).')
+                : 'The current backend accepts numerical features only. It has not confirmed audio extraction compatible with the model.'}
+          </p>
           <div className={`processing-status-line${capability.available ? ' processing-ready' : ''}`}>
             {capability.available ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
-            <span>{capability.loading ? 'Checking capability' : capability.available ? 'Backend capability confirmed' : 'Waiting for compatible backend support'}</span>
+            <span>
+              {capability.loading
+                ? 'Checking capability'
+                : capability.available
+                  ? (capability.screeningCompatible ? 'Backend capability confirmed' : 'Research extraction ready · Automated screening disabled')
+                  : 'Waiting for compatible backend support'}
+            </span>
           </div>
           {audio && capability.available && !formatCompatible && <p className="format-warning" role="status">The backend has not declared support for this recording format ({getMediaType(audio) || 'unknown'}).</p>}
           <button className="button button-ink submit-audio-button" type="button" disabled={!canSubmit} onClick={handleSubmit}>
-            <Send size={15} />{submitting ? 'Sending audio…' : 'Submit audio for processing'}
+            <Send size={15} />{submitting ? 'Analyzing audio…' : (capability.screeningCompatible ? 'Submit audio for processing' : 'Submit sample for research analysis')}
           </button>
-          {!capability.available && <p className="submit-disabled-note">Submission stays disabled until the backend explicitly confirms audio extraction, model compatibility, and accepted formats.</p>}
+          {!capability.available && <p className="submit-disabled-note">Submission stays disabled until the backend explicitly confirms audio extraction and accepted formats.</p>}
         </aside>
       </div>
 

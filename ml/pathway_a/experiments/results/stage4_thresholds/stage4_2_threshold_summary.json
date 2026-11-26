@@ -1,0 +1,521 @@
+{
+  "audit_stage": "4.2",
+  "description": "Threshold Robustness & Operating Dynamics Audit",
+  "cohort": {
+    "total_participants": 32,
+    "parkinsons": 24,
+    "healthy_controls": 8
+  },
+  "threshold_grid": [
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9
+  ],
+  "reference_operating_points": {
+    "standard_reference_tau_0_50": {
+      "threshold": 0.5,
+      "et13": {
+        "threshold": 0.5,
+        "tp": 17.0,
+        "tn": 7.0,
+        "fp": 1.0,
+        "fn": 7.0,
+        "predicted_positives": 18.0,
+        "predicted_negatives": 14.0,
+        "sensitivity": 0.7083,
+        "specificity": 0.875,
+        "precision": 0.9444,
+        "f1_score": 0.8095,
+        "balanced_accuracy": 0.7917,
+        "false_negative_rate": 0.2917,
+        "false_positive_rate": 0.125,
+        "accuracy": 0.75,
+        "mcc": 0.5092
+      },
+      "h22": {
+        "threshold": 0.5,
+        "tp": 20.0,
+        "tn": 4.0,
+        "fp": 4.0,
+        "fn": 4.0,
+        "predicted_positives": 24.0,
+        "predicted_negatives": 8.0,
+        "sensitivity": 0.8333,
+        "specificity": 0.5,
+        "precision": 0.8333,
+        "f1_score": 0.8333,
+        "balanced_accuracy": 0.6667,
+        "false_negative_rate": 0.1667,
+        "false_positive_rate": 0.5,
+        "accuracy": 0.75,
+        "mcc": 0.3333
+      }
+    },
+    "exploratory_screening_tau_0_45": {
+      "threshold": 0.45,
+      "et13": {
+        "threshold": 0.45,
+        "tp": 18.0,
+        "tn": 7.0,
+        "fp": 1.0,
+        "fn": 6.0,
+        "predicted_positives": 19.0,
+        "predicted_negatives": 13.0,
+        "sensitivity": 0.75,
+        "specificity": 0.875,
+        "precision": 0.9474,
+        "f1_score": 0.8372,
+        "balanced_accuracy": 0.8125,
+        "false_negative_rate": 0.25,
+        "false_positive_rate": 0.125,
+        "accuracy": 0.7812,
+        "mcc": 0.551
+      },
+      "h22": {
+        "threshold": 0.45,
+        "tp": 21.0,
+        "tn": 4.0,
+        "fp": 4.0,
+        "fn": 3.0,
+        "predicted_positives": 25.0,
+        "predicted_negatives": 7.0,
+        "sensitivity": 0.875,
+        "specificity": 0.5,
+        "precision": 0.84,
+        "f1_score": 0.8571,
+        "balanced_accuracy": 0.6875,
+        "false_negative_rate": 0.125,
+        "false_positive_rate": 0.5,
+        "accuracy": 0.7812,
+        "mcc": 0.3928
+      }
+    }
+  },
+  "et13_stability_analysis": {
+    "step_stability": [
+      {
+        "from_threshold": 0.1,
+        "to_threshold": 0.15,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": 0.0,
+        "delta_f1": 0.0,
+        "delta_mcc": 0.0,
+        "is_plateau": true,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.15,
+        "to_threshold": 0.2,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": 0.0,
+        "delta_f1": 0.0,
+        "delta_mcc": 0.0,
+        "is_plateau": true,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.2,
+        "to_threshold": 0.25,
+        "delta_sensitivity": -0.0417,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0208,
+        "delta_f1": -0.0207,
+        "delta_mcc": -0.1037,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.25,
+        "to_threshold": 0.3,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0625,
+        "delta_f1": 0.0155,
+        "delta_mcc": 0.2528,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.3,
+        "to_threshold": 0.35,
+        "delta_sensitivity": -0.0833,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0208,
+        "delta_f1": -0.0284,
+        "delta_mcc": 0.0,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.35,
+        "to_threshold": 0.4,
+        "delta_sensitivity": -0.0833,
+        "delta_specificity": 0.25,
+        "delta_balanced_accuracy": 0.0833,
+        "delta_f1": -0.015,
+        "delta_mcc": 0.1318,
+        "is_plateau": false,
+        "is_cliff": true
+      },
+      {
+        "from_threshold": 0.4,
+        "to_threshold": 0.45,
+        "delta_sensitivity": -0.0417,
+        "delta_specificity": 0.375,
+        "delta_balanced_accuracy": 0.1667,
+        "delta_f1": 0.0287,
+        "delta_mcc": 0.2701,
+        "is_plateau": false,
+        "is_cliff": true
+      },
+      {
+        "from_threshold": 0.45,
+        "to_threshold": 0.5,
+        "delta_sensitivity": -0.0417,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0208,
+        "delta_f1": -0.0277,
+        "delta_mcc": -0.0418,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.5,
+        "to_threshold": 0.55,
+        "delta_sensitivity": -0.125,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0625,
+        "delta_f1": -0.0916,
+        "delta_mcc": -0.1115,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.55,
+        "to_threshold": 0.6,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": 0.0,
+        "delta_f1": 0.0,
+        "delta_mcc": 0.0,
+        "is_plateau": true,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.6,
+        "to_threshold": 0.65,
+        "delta_sensitivity": -0.0416,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0209,
+        "delta_f1": -0.0337,
+        "delta_mcc": -0.034,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.65,
+        "to_threshold": 0.7,
+        "delta_sensitivity": -0.0834,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0416,
+        "delta_f1": -0.0731,
+        "delta_mcc": -0.0656,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.7,
+        "to_threshold": 0.75,
+        "delta_sensitivity": -0.125,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0,
+        "delta_f1": -0.1111,
+        "delta_mcc": 0.0352,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.75,
+        "to_threshold": 0.8,
+        "delta_sensitivity": -0.0416,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0209,
+        "delta_f1": -0.0484,
+        "delta_mcc": -0.0278,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.8,
+        "to_threshold": 0.85,
+        "delta_sensitivity": -0.125,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0625,
+        "delta_f1": -0.1659,
+        "delta_mcc": -0.0873,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.85,
+        "to_threshold": 0.9,
+        "delta_sensitivity": -0.0417,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0208,
+        "delta_f1": -0.0635,
+        "delta_mcc": -0.0325,
+        "is_plateau": false,
+        "is_cliff": false
+      }
+    ],
+    "max_balanced_accuracy_point": {
+      "threshold": 0.45,
+      "balanced_accuracy": 0.8125,
+      "sensitivity": 0.75,
+      "specificity": 0.875,
+      "f1_score": 0.8372,
+      "mcc": 0.551
+    },
+    "max_f1_point": {
+      "threshold": 0.1,
+      "f1_score": 0.8571,
+      "balanced_accuracy": 0.5,
+      "sensitivity": 1.0,
+      "specificity": 0.0
+    },
+    "max_mcc_point": {
+      "threshold": 0.45,
+      "mcc": 0.551,
+      "balanced_accuracy": 0.8125
+    },
+    "near_optimal_plateau_range": [
+      0.45,
+      0.5
+    ]
+  },
+  "h22_stability_analysis": {
+    "step_stability": [
+      {
+        "from_threshold": 0.1,
+        "to_threshold": 0.15,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": 0.0,
+        "delta_f1": 0.0,
+        "delta_mcc": 0.0,
+        "is_plateau": true,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.15,
+        "to_threshold": 0.2,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0625,
+        "delta_f1": 0.0156,
+        "delta_mcc": 0.3111,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.2,
+        "to_threshold": 0.25,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0625,
+        "delta_f1": 0.0162,
+        "delta_mcc": 0.1361,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.25,
+        "to_threshold": 0.3,
+        "delta_sensitivity": -0.0417,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0417,
+        "delta_f1": -0.0043,
+        "delta_mcc": -0.0108,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.3,
+        "to_threshold": 0.35,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0625,
+        "delta_f1": 0.0174,
+        "delta_mcc": 0.1102,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.35,
+        "to_threshold": 0.4,
+        "delta_sensitivity": -0.0416,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0209,
+        "delta_f1": -0.022,
+        "delta_mcc": -0.0843,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.4,
+        "to_threshold": 0.45,
+        "delta_sensitivity": -0.0417,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0208,
+        "delta_f1": -0.0229,
+        "delta_mcc": -0.0695,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.45,
+        "to_threshold": 0.5,
+        "delta_sensitivity": -0.0417,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0208,
+        "delta_f1": -0.0238,
+        "delta_mcc": -0.0595,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.5,
+        "to_threshold": 0.55,
+        "delta_sensitivity": -0.125,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0,
+        "delta_f1": -0.0606,
+        "delta_mcc": -0.0352,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.55,
+        "to_threshold": 0.6,
+        "delta_sensitivity": -0.0416,
+        "delta_specificity": 0.25,
+        "delta_balanced_accuracy": 0.1041,
+        "delta_f1": 0.0078,
+        "delta_mcc": 0.1719,
+        "is_plateau": false,
+        "is_cliff": true
+      },
+      {
+        "from_threshold": 0.6,
+        "to_threshold": 0.65,
+        "delta_sensitivity": -0.125,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0625,
+        "delta_f1": -0.0963,
+        "delta_mcc": -0.1063,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.65,
+        "to_threshold": 0.7,
+        "delta_sensitivity": -0.0834,
+        "delta_specificity": 0.125,
+        "delta_balanced_accuracy": 0.0209,
+        "delta_f1": -0.0556,
+        "delta_mcc": 0.0542,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.7,
+        "to_threshold": 0.75,
+        "delta_sensitivity": 0.0,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": 0.0,
+        "delta_f1": 0.0,
+        "delta_mcc": 0.0,
+        "is_plateau": true,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.75,
+        "to_threshold": 0.8,
+        "delta_sensitivity": -0.1666,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0834,
+        "delta_f1": -0.177,
+        "delta_mcc": -0.1124,
+        "is_plateau": false,
+        "is_cliff": true
+      },
+      {
+        "from_threshold": 0.8,
+        "to_threshold": 0.85,
+        "delta_sensitivity": -0.0834,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0416,
+        "delta_f1": -0.1068,
+        "delta_mcc": -0.057,
+        "is_plateau": false,
+        "is_cliff": false
+      },
+      {
+        "from_threshold": 0.85,
+        "to_threshold": 0.9,
+        "delta_sensitivity": -0.0833,
+        "delta_specificity": 0.0,
+        "delta_balanced_accuracy": -0.0417,
+        "delta_f1": -0.1226,
+        "delta_mcc": -0.0628,
+        "is_plateau": false,
+        "is_cliff": false
+      }
+    ],
+    "max_balanced_accuracy_point": {
+      "threshold": 0.6,
+      "balanced_accuracy": 0.7708,
+      "sensitivity": 0.6667,
+      "specificity": 0.875,
+      "f1_score": 0.7805,
+      "mcc": 0.47
+    },
+    "max_f1_point": {
+      "threshold": 0.35,
+      "f1_score": 0.902,
+      "balanced_accuracy": 0.7292,
+      "sensitivity": 0.9583,
+      "specificity": 0.5
+    },
+    "max_mcc_point": {
+      "threshold": 0.35,
+      "mcc": 0.5466,
+      "balanced_accuracy": 0.7292
+    },
+    "near_optimal_plateau_range": [
+      0.6,
+      0.6
+    ]
+  },
+  "methodological_caveats": {
+    "unbiased_validation_rule": "Threshold exploration on evaluation data represents operating-point characterization, NOT unbiased prospective validation. Any selected operating threshold must be validated on independent future cohorts.",
+    "small_sample_support": "With N=8 controls, specificity moves in discrete quanta of 0.125 (1/8).",
+    "production_status": "No production weights or deployment thresholds are modified by this audit."
+  }
+}

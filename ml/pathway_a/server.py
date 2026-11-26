@@ -12,14 +12,22 @@ The server starts at: http://localhost:8001
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from ml.pathway_a.predict import load_model, predict_single
+from ml.pathway_a.predict import (
+    load_model,
+    load_et13_model,
+    predict_single,
+    predict_single_et13,
+)
 
 app = Flask(__name__)
 CORS(app)
 
-# Load once at startup — not on every request
-artifact = load_model()
-print(f"✓ Model loaded: {artifact['metadata']['model_version']}")
+# Load artifacts once at startup — not on every request
+baseline_artifact = load_model()
+et13_artifact = load_et13_model()
+artifact = baseline_artifact  # backwards compatibility alias
+print(f"✓ Baseline model loaded : {baseline_artifact['metadata']['model_version']}")
+print(f"✓ ET-13 candidate loaded: {et13_artifact['metadata']['model_version']}")
 
 
 @app.route("/health", methods=["GET"])
@@ -27,8 +35,13 @@ def health():
     return jsonify({
         "status": "ok",
         "server": "real",
-        "model_version": artifact["metadata"]["model_version"],
-        "algorithm": artifact["metadata"]["algorithm"],
+        "model_version": baseline_artifact["metadata"]["model_version"],
+        "algorithm": baseline_artifact["metadata"]["algorithm"],
+        "baseline_model_version": baseline_artifact["metadata"]["model_version"],
+        "baseline_algorithm": baseline_artifact["metadata"]["algorithm"],
+        "et13_model_version": et13_artifact["metadata"]["model_version"],
+        "et13_algorithm": et13_artifact["metadata"]["algorithm"],
+        "supported_endpoints": ["/predict", "/predict/et13", "/health"],
     })
 
 
@@ -43,10 +56,29 @@ def predict():
         }), 400
 
     try:
-        result = predict_single(data, artifact)
+        result = predict_single(data, baseline_artifact)
         return jsonify(result)
     except ValueError as e:
         return jsonify({"error": "Missing required features", "detail": str(e)}), 422
+    except Exception as e:
+        return jsonify({"error": "Inference failed", "detail": str(e)}), 500
+
+
+@app.route("/predict/et13", methods=["POST"])
+def predict_et13():
+    data = request.get_json(silent=True)
+
+    if data is None:
+        return jsonify({
+            "error": "Invalid request",
+            "detail": "Request body must be JSON with Content-Type: application/json",
+        }), 400
+
+    try:
+        result = predict_single_et13(data, et13_artifact)
+        return jsonify(result)
+    except ValueError as e:
+        return jsonify({"error": "Validation failed", "detail": str(e)}), 422
     except Exception as e:
         return jsonify({"error": "Inference failed", "detail": str(e)}), 500
 

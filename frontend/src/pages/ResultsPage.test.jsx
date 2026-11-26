@@ -65,6 +65,46 @@ describe('ResultsPage', () => {
 
   it('treats a success state with an invalid response as an error', () => {
     renderResults({ status: 'success', result: { label: 'PARKINSONS' } })
-    expect(screen.getByText(/did not include a valid prediction payload/i)).toBeInTheDocument()
+    expect(screen.getByText(/did not include a valid prediction or research payload/i)).toBeInTheDocument()
+  })
+
+  it('renders research-status UI when live audio screening is disabled', () => {
+    const disabledResponse = {
+      status: 'screening_disabled',
+      screening_available: false,
+      message: 'Automated audio screening is temporarily disabled.',
+      validation_summary: 'Evaluated under LOGO; achieved balanced accuracy 0.6667.',
+      duration_seconds: 1.5,
+      sampling_frequency: 44100,
+      extracted_feature_count: 16,
+      extracted_features: {
+        'MDVP:Fo(Hz)': 154.23,
+        'HNR': 21.45,
+      },
+      disclaimer: 'Research status notification only; this output is not a diagnosis.',
+    }
+
+    renderResults({ status: 'success', result: disabledResponse })
+
+    // Verify clear, professional research notice
+    expect(screen.getByText('AUTOMATED SCREENING DISABLED')).toBeInTheDocument()
+    expect(screen.getByText('Screening Disabled')).toBeInTheDocument()
+    expect(screen.getAllByText(/Validation criteria not met/i).length).toBeGreaterThanOrEqual(1)
+    expect(screen.getByText(/Audio analysis is experimental/i)).toBeInTheDocument()
+    expect(screen.getByText(/Automated screening temporarily disabled/i)).toBeInTheDocument()
+    expect(screen.getByText(/Not a medical assessment/i)).toBeInTheDocument()
+
+    // Verify raw feature inspection is displayed
+    expect(screen.getByText('Extracted Acoustic Biomarkers')).toBeInTheDocument()
+    expect(screen.getByText('MDVP:Fo(Hz)')).toBeInTheDocument()
+    expect(screen.getByText('HNR')).toBeInTheDocument()
+
+    // CRITICAL: Ensure disease classifications, confidence, and probabilities are NOT rendered
+    expect(screen.queryByText('PARKINSONS')).not.toBeInTheDocument()
+    expect(screen.queryByText('HEALTHY')).not.toBeInTheDocument()
+    expect(screen.queryByText('Model confidence')).not.toBeInTheDocument()
+    expect(screen.queryByText('Class probabilities')).not.toBeInTheDocument()
+    expect(screen.queryByText('Parkinson’s class')).not.toBeInTheDocument()
+    expect(screen.queryByText('Healthy class')).not.toBeInTheDocument()
   })
 })

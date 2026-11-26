@@ -1,0 +1,42 @@
+{
+  "tau_0.5": {
+    "threshold": 0.5,
+    "both_correct_n11": 21,
+    "both_incorrect_n00": 5,
+    "h22_correct_et13_incorrect_b": 3,
+    "et13_correct_h22_incorrect_c": 3,
+    "total_discordant": 6,
+    "exact_mcnemar_p_value": 1.0,
+    "subjects_where_h22_correct": [
+      "S04",
+      "S06",
+      "S27"
+    ],
+    "subjects_where_et13_correct": [
+      "S13",
+      "S43",
+      "S49"
+    ],
+    "interpretation": "Nonsignificant overall accuracy difference does not imply equivalence; errors fundamentally shifted from healthy controls (specificity) to mild PD cases (sensitivity)."
+  },
+  "tau_0.45": {
+    "threshold": 0.45,
+    "both_correct_n11": 22,
+    "both_incorrect_n00": 4,
+    "h22_correct_et13_incorrect_b": 3,
+    "et13_correct_h22_incorrect_c": 3,
+    "total_discordant": 6,
+    "exact_mcnemar_p_value": 1.0,
+    "subjects_where_h22_correct": [
+      "S04",
+      "S27",
+      "S44"
+    ],
+    "subjects_where_et13_correct": [
+      "S13",
+      "S43",
+      "S49"
+    ],
+    "interpretation": "Nonsignificant overall accuracy difference does not imply equivalence; errors fundamentally shifted from healthy controls (specificity) to mild PD cases (sensitivity)."
+  }
+}

@@ -1,0 +1,13 @@
+model,threshold,metric,point_estimate,bootstrap_mean,bootstrap_std,ci95_percentile_lower,ci95_percentile_upper,ci95_clopper_pearson_lower,ci95_clopper_pearson_upper,ci95_wilson_lower,ci95_wilson_upper
+historical_22,0.5,sensitivity,0.8333,0.8366,0.0746,0.6667,0.9583,0.6262,0.9526,0.6415,0.9332
+historical_22,0.5,specificity,0.5,0.5027,0.1781,0.125,0.875,0.157,0.843,0.2152,0.7848
+historical_22,0.5,balanced_accuracy,0.6667,0.6696,0.0958,0.4792,0.8542,,,,
+historical_22,0.5,precision,0.8333,0.8367,0.0518,0.7407,0.9524,,,,
+historical_22,0.5,f1_score,0.8333,0.8347,0.0503,0.7273,0.92,,,,
+historical_22,0.5,roc_auc,0.8073,0.8092,0.0849,0.625,0.948,,,,
+historical_22,0.45,sensitivity,0.875,0.8775,0.066,0.75,1.0,0.6764,0.9734,0.69,0.9566
+historical_22,0.45,specificity,0.5,0.5027,0.1781,0.125,0.875,0.157,0.843,0.2152,0.7848
+historical_22,0.45,balanced_accuracy,0.6875,0.6901,0.095,0.5,0.875,,,,
+historical_22,0.45,precision,0.84,0.8432,0.0498,0.75,0.9545,,,,
+historical_22,0.45,f1_score,0.8571,0.8584,0.0452,0.766,0.9388,,,,
+historical_22,0.45,roc_auc,0.8073,0.8092,0.0849,0.625,0.948,,,,

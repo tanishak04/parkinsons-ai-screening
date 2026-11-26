@@ -1,0 +1,370 @@
+{
+  "correlations": {
+    "semitone_range": {
+      "corr_with_Fo": 0.0889,
+      "corr_with_status": 0.0917
+    },
+    "ratio_fhi_fo": {
+      "corr_with_Fo": -0.1358,
+      "corr_with_status": 0.002
+    },
+    "ratio_fo_flo": {
+      "corr_with_Fo": 0.2952,
+      "corr_with_status": 0.0684
+    },
+    "ratio_fhi_flo": {
+      "corr_with_Fo": 0.0569,
+      "corr_with_status": 0.0414
+    },
+    "log_ratio_fhi_fo": {
+      "corr_with_Fo": -0.1511,
+      "corr_with_status": 0.052
+    },
+    "log_ratio_fo_flo": {
+      "corr_with_Fo": 0.274,
+      "corr_with_status": 0.0891
+    },
+    "pitch_pos_ratio": {
+      "corr_with_Fo": 0.344,
+      "corr_with_status": -0.0557
+    }
+  },
+  "critical_subject_tracking": {
+    "S13": {
+      "B0_pitch_free_13": {
+        "mean_pd_prob": 0.4277,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B1_semitone_only": {
+        "mean_pd_prob": 0.4707,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B1_all_relative_pitch": {
+        "mean_pd_prob": 0.48,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B2_combined_17": {
+        "mean_pd_prob": 0.4594,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_semitone_range": {
+        "mean_pd_prob": 0.431,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_linear_ratios": {
+        "mean_pd_prob": 0.4223,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_log_ratios": {
+        "mean_pd_prob": 0.4262,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_pitch_pos_ratio": {
+        "mean_pd_prob": 0.4258,
+        "sub_pred": 0,
+        "is_correct": 1
+      }
+    },
+    "S43": {
+      "B0_pitch_free_13": {
+        "mean_pd_prob": 0.3502,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B1_semitone_only": {
+        "mean_pd_prob": 0.5303,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B1_all_relative_pitch": {
+        "mean_pd_prob": 0.5089,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B2_combined_17": {
+        "mean_pd_prob": 0.3909,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_semitone_range": {
+        "mean_pd_prob": 0.3876,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_linear_ratios": {
+        "mean_pd_prob": 0.3802,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_log_ratios": {
+        "mean_pd_prob": 0.3813,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_pitch_pos_ratio": {
+        "mean_pd_prob": 0.388,
+        "sub_pred": 0,
+        "is_correct": 1
+      }
+    },
+    "S49": {
+      "B0_pitch_free_13": {
+        "mean_pd_prob": 0.4138,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B1_semitone_only": {
+        "mean_pd_prob": 0.6138,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B1_all_relative_pitch": {
+        "mean_pd_prob": 0.6847,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B2_combined_17": {
+        "mean_pd_prob": 0.4652,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_semitone_range": {
+        "mean_pd_prob": 0.448,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_linear_ratios": {
+        "mean_pd_prob": 0.445,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_log_ratios": {
+        "mean_pd_prob": 0.4517,
+        "sub_pred": 0,
+        "is_correct": 1
+      },
+      "B3_plus_pitch_pos_ratio": {
+        "mean_pd_prob": 0.4418,
+        "sub_pred": 0,
+        "is_correct": 1
+      }
+    },
+    "S08": {
+      "B0_pitch_free_13": {
+        "mean_pd_prob": 0.3156,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B1_semitone_only": {
+        "mean_pd_prob": 0.4381,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B1_all_relative_pitch": {
+        "mean_pd_prob": 0.4387,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B2_combined_17": {
+        "mean_pd_prob": 0.3231,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B3_plus_semitone_range": {
+        "mean_pd_prob": 0.3284,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B3_plus_linear_ratios": {
+        "mean_pd_prob": 0.3243,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B3_plus_log_ratios": {
+        "mean_pd_prob": 0.3215,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B3_plus_pitch_pos_ratio": {
+        "mean_pd_prob": 0.3345,
+        "sub_pred": 0,
+        "is_correct": 0
+      }
+    },
+    "S26": {
+      "B0_pitch_free_13": {
+        "mean_pd_prob": 0.5049,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B1_semitone_only": {
+        "mean_pd_prob": 0.5383,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B1_all_relative_pitch": {
+        "mean_pd_prob": 0.5094,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B2_combined_17": {
+        "mean_pd_prob": 0.508,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_semitone_range": {
+        "mean_pd_prob": 0.5061,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_linear_ratios": {
+        "mean_pd_prob": 0.4931,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B3_plus_log_ratios": {
+        "mean_pd_prob": 0.4966,
+        "sub_pred": 0,
+        "is_correct": 0
+      },
+      "B3_plus_pitch_pos_ratio": {
+        "mean_pd_prob": 0.5025,
+        "sub_pred": 1,
+        "is_correct": 1
+      }
+    },
+    "S34": {
+      "B0_pitch_free_13": {
+        "mean_pd_prob": 0.6024,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B1_semitone_only": {
+        "mean_pd_prob": 0.5601,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B1_all_relative_pitch": {
+        "mean_pd_prob": 0.5487,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B2_combined_17": {
+        "mean_pd_prob": 0.5927,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_semitone_range": {
+        "mean_pd_prob": 0.5953,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_linear_ratios": {
+        "mean_pd_prob": 0.6055,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_log_ratios": {
+        "mean_pd_prob": 0.6017,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_pitch_pos_ratio": {
+        "mean_pd_prob": 0.5912,
+        "sub_pred": 1,
+        "is_correct": 1
+      }
+    },
+    "S35": {
+      "B0_pitch_free_13": {
+        "mean_pd_prob": 0.9413,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B1_semitone_only": {
+        "mean_pd_prob": 0.5705,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B1_all_relative_pitch": {
+        "mean_pd_prob": 0.5535,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B2_combined_17": {
+        "mean_pd_prob": 0.9688,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_semitone_range": {
+        "mean_pd_prob": 0.9552,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_linear_ratios": {
+        "mean_pd_prob": 0.9521,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_log_ratios": {
+        "mean_pd_prob": 0.9649,
+        "sub_pred": 1,
+        "is_correct": 1
+      },
+      "B3_plus_pitch_pos_ratio": {
+        "mean_pd_prob": 0.951,
+        "sub_pred": 1,
+        "is_correct": 1
+      }
+    },
+    "S50": {
+      "B0_pitch_free_13": {
+        "mean_pd_prob": 0.748,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B1_semitone_only": {
+        "mean_pd_prob": 0.7277,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B1_all_relative_pitch": {
+        "mean_pd_prob": 0.7967,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B2_combined_17": {
+        "mean_pd_prob": 0.7608,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B3_plus_semitone_range": {
+        "mean_pd_prob": 0.7222,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B3_plus_linear_ratios": {
+        "mean_pd_prob": 0.745,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B3_plus_log_ratios": {
+        "mean_pd_prob": 0.7343,
+        "sub_pred": 1,
+        "is_correct": 0
+      },
+      "B3_plus_pitch_pos_ratio": {
+        "mean_pd_prob": 0.7082,
+        "sub_pred": 1,
+        "is_correct": 0
+      }
+    }
+  }
+}

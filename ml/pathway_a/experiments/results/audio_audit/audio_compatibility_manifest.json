@@ -1,0 +1,385 @@
+{
+  "stage": "6A",
+  "audit_name": "Audio-to-Feature Compatibility Audit",
+  "dataset": "UCI Parkinson's Dataset (Pathway A)",
+  "model_artifact": "champion_pipeline.joblib",
+  "model_architecture": "ExtraTreesClassifier",
+  "total_required_features": 22,
+  "extractable_features_count": 16,
+  "missing_features_count": 6,
+  "is_live_audio_fully_compatible": false,
+  "blocker_code": "NONLINEAR_FEATURES_UNAVAILABLE",
+  "blocker_description": "The frozen champion model requires 6 non-linear dynamical features (spread1, spread2, PPE, RPDE, DFA, D2) developed by Max Little et al. (2007). These features cannot be reliably computed from live browser microphone recordings using standard acoustic software (Praat/Parselmouth). Because SHAP analysis revealed that spread1, PPE, and spread2 represent >60% of model predictive attribution, substituting dummy values (zeros or means) would result in clinically invalid predictions.",
+  "praat_extractable_features": [
+    "MDVP:Fo(Hz)",
+    "MDVP:Fhi(Hz)",
+    "MDVP:Flo(Hz)",
+    "MDVP:Jitter(%)",
+    "MDVP:Jitter(Abs)",
+    "MDVP:RAP",
+    "MDVP:PPQ",
+    "Jitter:DDP",
+    "MDVP:Shimmer",
+    "MDVP:Shimmer(dB)",
+    "Shimmer:APQ3",
+    "Shimmer:APQ5",
+    "MDVP:APQ",
+    "Shimmer:DDA",
+    "NHR",
+    "HNR"
+  ],
+  "nonlinear_missing_features": [
+    "RPDE",
+    "DFA",
+    "spread1",
+    "spread2",
+    "D2",
+    "PPE"
+  ],
+  "feature_details": [
+    {
+      "name": "MDVP:Fo(Hz)",
+      "category": "Fundamental Frequency",
+      "extractable_praat": true,
+      "tool": "Praat (Sound.to_pitch)",
+      "math_desc": "Average fundamental vocal frequency (pitch)",
+      "uci_col": "MDVP:Fo(Hz)"
+    },
+    {
+      "name": "MDVP:Fhi(Hz)",
+      "category": "Fundamental Frequency",
+      "extractable_praat": true,
+      "tool": "Praat (Pitch.get_maximum)",
+      "math_desc": "Maximum fundamental vocal frequency",
+      "uci_col": "MDVP:Fhi(Hz)"
+    },
+    {
+      "name": "MDVP:Flo(Hz)",
+      "category": "Fundamental Frequency",
+      "extractable_praat": true,
+      "tool": "Praat (Pitch.get_minimum)",
+      "math_desc": "Minimum fundamental vocal frequency",
+      "uci_col": "MDVP:Flo(Hz)"
+    },
+    {
+      "name": "MDVP:Jitter(%)",
+      "category": "Frequency Perturbation (Jitter)",
+      "extractable_praat": true,
+      "tool": "Praat (Get jitter local)",
+      "math_desc": "Cycle-to-cycle percentage variation in fundamental period",
+      "uci_col": "MDVP:Jitter(%)"
+    },
+    {
+      "name": "MDVP:Jitter(Abs)",
+      "category": "Frequency Perturbation (Jitter)",
+      "extractable_praat": true,
+      "tool": "Praat (Get jitter absolute)",
+      "math_desc": "Absolute cycle-to-cycle variation in fundamental period (seconds)",
+      "uci_col": "MDVP:Jitter(Abs)"
+    },
+    {
+      "name": "MDVP:RAP",
+      "category": "Frequency Perturbation (Jitter)",
+      "extractable_praat": true,
+      "tool": "Praat (Get jitter rap)",
+      "math_desc": "Relative Average Perturbation (3-cycle average)",
+      "uci_col": "MDVP:RAP"
+    },
+    {
+      "name": "MDVP:PPQ",
+      "category": "Frequency Perturbation (Jitter)",
+      "extractable_praat": true,
+      "tool": "Praat (Get jitter ppq5)",
+      "math_desc": "Five-point Period Perturbation Quotient",
+      "uci_col": "MDVP:PPQ"
+    },
+    {
+      "name": "Jitter:DDP",
+      "category": "Frequency Perturbation (Jitter)",
+      "extractable_praat": true,
+      "tool": "Praat (Get jitter ddp)",
+      "math_desc": "Average absolute difference of differences between consecutive periods (3 * RAP)",
+      "uci_col": "Jitter:DDP"
+    },
+    {
+      "name": "MDVP:Shimmer",
+      "category": "Amplitude Perturbation (Shimmer)",
+      "extractable_praat": true,
+      "tool": "Praat (Get shimmer local)",
+      "math_desc": "Cycle-to-cycle percentage variation in amplitude peak",
+      "uci_col": "MDVP:Shimmer"
+    },
+    {
+      "name": "MDVP:Shimmer(dB)",
+      "category": "Amplitude Perturbation (Shimmer)",
+      "extractable_praat": true,
+      "tool": "Praat (Get shimmer local_dB)",
+      "math_desc": "Logarithmic cycle-to-cycle amplitude perturbation in decibels",
+      "uci_col": "MDVP:Shimmer(dB)"
+    },
+    {
+      "name": "Shimmer:APQ3",
+      "category": "Amplitude Perturbation (Shimmer)",
+      "extractable_praat": true,
+      "tool": "Praat (Get shimmer apq3)",
+      "math_desc": "Three-point Amplitude Perturbation Quotient",
+      "uci_col": "Shimmer:APQ3"
+    },
+    {
+      "name": "Shimmer:APQ5",
+      "category": "Amplitude Perturbation (Shimmer)",
+      "extractable_praat": true,
+      "tool": "Praat (Get shimmer apq5)",
+      "math_desc": "Five-point Amplitude Perturbation Quotient",
+      "uci_col": "Shimmer:APQ5"
+    },
+    {
+      "name": "MDVP:APQ",
+      "category": "Amplitude Perturbation (Shimmer)",
+      "extractable_praat": true,
+      "tool": "Praat (Get shimmer apq11)",
+      "math_desc": "11-point Amplitude Perturbation Quotient",
+      "uci_col": "MDVP:APQ"
+    },
+    {
+      "name": "Shimmer:DDA",
+      "category": "Amplitude Perturbation (Shimmer)",
+      "extractable_praat": true,
+      "tool": "Praat (Get shimmer dda)",
+      "math_desc": "Average absolute differences between consecutive amplitude differences (3 * APQ3)",
+      "uci_col": "Shimmer:DDA"
+    },
+    {
+      "name": "NHR",
+      "category": "Noise Ratio",
+      "extractable_praat": true,
+      "tool": "Praat (10^(-HNR/10))",
+      "math_desc": "Noise-to-Harmonics Ratio (incoherent spectral energy fraction)",
+      "uci_col": "NHR"
+    },
+    {
+      "name": "HNR",
+      "category": "Noise Ratio",
+      "extractable_praat": true,
+      "tool": "Praat (Sound.to_harmonicity)",
+      "math_desc": "Harmonics-to-Noise Ratio (dB), ratio of periodic to noise component",
+      "uci_col": "HNR"
+    },
+    {
+      "name": "RPDE",
+      "category": "Non-linear Dynamic",
+      "extractable_praat": false,
+      "tool": "Max Little C/MATLAB Algorithm",
+      "math_desc": "Recurrence Period Density Entropy: measures deviation from periodicity via phase space embedding",
+      "uci_col": "RPDE"
+    },
+    {
+      "name": "DFA",
+      "category": "Non-linear Dynamic",
+      "extractable_praat": false,
+      "tool": "Max Little C/MATLAB Algorithm",
+      "math_desc": "Detrended Fluctuation Analysis: fractal scaling exponent of turbulent acoustic time series",
+      "uci_col": "DFA"
+    },
+    {
+      "name": "spread1",
+      "category": "Non-linear Dynamic",
+      "extractable_praat": false,
+      "tool": "Max Little C/MATLAB Algorithm",
+      "math_desc": "Non-linear fundamental frequency variation distribution spread (semitone-entropy tail)",
+      "uci_col": "spread1"
+    },
+    {
+      "name": "spread2",
+      "category": "Non-linear Dynamic",
+      "extractable_praat": false,
+      "tool": "Max Little C/MATLAB Algorithm",
+      "math_desc": "Secondary non-linear spectral frequency variation distribution spread",
+      "uci_col": "spread2"
+    },
+    {
+      "name": "D2",
+      "category": "Non-linear Dynamic",
+      "extractable_praat": false,
+      "tool": "Max Little C/MATLAB Algorithm",
+      "math_desc": "Correlation Dimension: Grassberger-Procaccia phase space attractor fractal dimension",
+      "uci_col": "D2"
+    },
+    {
+      "name": "PPE",
+      "category": "Non-linear Dynamic",
+      "extractable_praat": false,
+      "tool": "Max Little C/MATLAB Algorithm",
+      "math_desc": "Pitch Period Entropy: logarithmic semitone entropy sensitive to dysphonia, insensitive to healthy pitch drift",
+      "uci_col": "PPE"
+    }
+  ],
+  "synthetic_test_extraction": {
+    "MDVP:Fo(Hz)": 155.0,
+    "MDVP:Fhi(Hz)": 155.036,
+    "MDVP:Flo(Hz)": 154.95,
+    "MDVP:Jitter(%)": 0.000341,
+    "MDVP:Jitter(Abs)": 2e-06,
+    "MDVP:RAP": 0.000202,
+    "MDVP:PPQ": 0.000207,
+    "Jitter:DDP": 0.000606,
+    "MDVP:Shimmer": 0.002772,
+    "MDVP:Shimmer(dB)": 0.0241,
+    "Shimmer:APQ3": 0.001576,
+    "Shimmer:APQ5": 0.001703,
+    "MDVP:APQ": 0.001867,
+    "Shimmer:DDA": 0.004729,
+    "NHR": 0.000226,
+    "HNR": 36.468
+  },
+  "uci_reference_statistics": {
+    "MDVP:Fo(Hz)": {
+      "min": 88.333,
+      "mean": 154.22864102564102,
+      "std": 41.39006474907147,
+      "max": 260.105
+    },
+    "MDVP:Fhi(Hz)": {
+      "min": 102.145,
+      "mean": 197.10491794871797,
+      "std": 91.49154763503036,
+      "max": 592.03
+    },
+    "MDVP:Flo(Hz)": {
+      "min": 65.476,
+      "mean": 116.32463076923077,
+      "std": 43.52141318199365,
+      "max": 239.17
+    },
+    "MDVP:Jitter(%)": {
+      "min": 0.00168,
+      "mean": 0.006220461538461538,
+      "std": 0.00484813369260256,
+      "max": 0.03316
+    },
+    "MDVP:Jitter(Abs)": {
+      "min": 7e-06,
+      "mean": 4.395897435897436e-05,
+      "std": 3.482190859976326e-05,
+      "max": 0.00026
+    },
+    "MDVP:RAP": {
+      "min": 0.00068,
+      "mean": 0.003306410256410257,
+      "std": 0.0029677744162016884,
+      "max": 0.02144
+    },
+    "MDVP:PPQ": {
+      "min": 0.00092,
+      "mean": 0.003446358974358974,
+      "std": 0.0027589766469679313,
+      "max": 0.01958
+    },
+    "Jitter:DDP": {
+      "min": 0.00204,
+      "mean": 0.009919948717948717,
+      "std": 0.008903344355858987,
+      "max": 0.06433
+    },
+    "MDVP:Shimmer": {
+      "min": 0.00954,
+      "mean": 0.0297091282051282,
+      "std": 0.01885693185894681,
+      "max": 0.11908
+    },
+    "MDVP:Shimmer(dB)": {
+      "min": 0.085,
+      "mean": 0.2822512820512821,
+      "std": 0.19487729006053414,
+      "max": 1.302
+    },
+    "Shimmer:APQ3": {
+      "min": 0.00455,
+      "mean": 0.015664153846153845,
+      "std": 0.010153161595709018,
+      "max": 0.05647
+    },
+    "Shimmer:APQ5": {
+      "min": 0.0057,
+      "mean": 0.017878256410256407,
+      "std": 0.012023705538741727,
+      "max": 0.0794
+    },
+    "MDVP:APQ": {
+      "min": 0.00719,
+      "mean": 0.02408148717948718,
+      "std": 0.016946736247029432,
+      "max": 0.13778
+    },
+    "Shimmer:DDA": {
+      "min": 0.01364,
+      "mean": 0.04699261538461539,
+      "std": 0.030459119431240397,
+      "max": 0.16942
+    },
+    "NHR": {
+      "min": 0.00065,
+      "mean": 0.02484707692307692,
+      "std": 0.04041844855606928,
+      "max": 0.31482
+    },
+    "HNR": {
+      "min": 8.441,
+      "mean": 21.885974358974355,
+      "std": 4.425764269063427,
+      "max": 33.047
+    },
+    "RPDE": {
+      "min": 0.25657,
+      "mean": 0.4985355384615385,
+      "std": 0.10394171413073468,
+      "max": 0.685151
+    },
+    "DFA": {
+      "min": 0.574282,
+      "mean": 0.7180990461538461,
+      "std": 0.0553358303465968,
+      "max": 0.825288
+    },
+    "spread1": {
+      "min": -7.964984,
+      "mean": -5.684396743589745,
+      "std": 1.090207763740309,
+      "max": -2.434031
+    },
+    "spread2": {
+      "min": 0.006274,
+      "mean": 0.22651034871794873,
+      "std": 0.08340576262039776,
+      "max": 0.450493
+    },
+    "D2": {
+      "min": 1.423287,
+      "mean": 2.3818260871794874,
+      "std": 0.3827990465461168,
+      "max": 3.671155
+    },
+    "PPE": {
+      "min": 0.044539,
+      "mean": 0.20655164102564103,
+      "std": 0.09011932248227507,
+      "max": 0.527367
+    }
+  },
+  "recommended_resolutions": [
+    {
+      "option": 1,
+      "strategy": "Retrain 16-feature Praat acoustic model (Recommended)",
+      "feasibility": "High",
+      "clinical_soundness": "High",
+      "description": "Train an isolated 16-feature model on the UCI dataset using only the Praat-extractable perturbation features under the same rigorous LOGO/SGKF cross-validation. This enables true end-to-end microphone recording inference without unverified algorithmic approximations."
+    },
+    {
+      "option": 2,
+      "strategy": "Algorithmic port of Max Little C/MATLAB routines",
+      "feasibility": "Low-Medium",
+      "clinical_soundness": "Medium",
+      "description": "Port the exact phase space reconstruction, Grassberger-Procaccia dimension (D2), recurrence entropy (RPDE), detrended fluctuation (DFA), and semitone entropy (PPE, spread1/2) into Python. Requires calibration against original audio recordings to prevent distribution shift."
+    }
+  ]
+}

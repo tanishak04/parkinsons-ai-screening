@@ -1,0 +1,9 @@
+model_id,feature_count,name,logo_part_bal_acc,logo_part_sensitivity,logo_part_specificity,logo_part_roc_auc,logo_part_f1,logo_rec_bal_acc,logo_rec_roc_auc,target_met_ge_0_70
+champion_22features,22,Champion ExtraTrees (22 features),0.666667,0.833333,0.5,0.807292,0.833333,0.634566,0.804138,False
+extratrees_default,16,ExtraTrees (Champion Hyperparameters),0.666667,0.708333,0.625,0.78125,0.772727,0.652423,0.751559,False
+extratrees_tuned_d5,16,"ExtraTrees (max_depth=5, min_samples_leaf=2)",0.625,0.75,0.5,0.78125,0.782609,0.645196,0.752268,False
+random_forest,16,"Random Forest (max_depth=4, min_samples_leaf=3)",0.5625,0.75,0.375,0.692708,0.765957,0.554634,0.68665,False
+logistic_regression_std,16,"Logistic Regression (StandardScaler, C=1.0)",0.583333,0.666667,0.5,0.6875,0.727273,0.583121,0.679563,False
+logistic_regression_robust,16,"Logistic Regression (RobustScaler, C=0.5)",0.583333,0.666667,0.5,0.703125,0.727273,0.586735,0.684099,False
+svm_rbf,16,"Support Vector Machine (RBF Kernel, Calibrated)",0.479167,0.958333,0.0,0.494792,0.836364,0.479592,0.500567,False
+gradient_boosting,16,"Gradient Boosting (n_est=100, depth=3, lr=0.05)",0.625,0.875,0.375,0.515625,0.84,0.550383,0.536848,False

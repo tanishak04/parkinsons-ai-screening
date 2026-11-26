@@ -1,0 +1,153 @@
+{
+  "stage": "stage_2c_stability_audit",
+  "dataset_verification": {
+    "n_recordings": 195,
+    "n_participants": 32,
+    "pd_participants": 24,
+    "healthy_participants": 8,
+    "fold_metrics_rows_verified": 896,
+    "pooled_oof_rows_verified": 17160,
+    "speaker_leakage_detected": false
+  },
+  "per_seed_summary": {
+    "lr_baseline_reference": {
+      "recording": {
+        "roc_auc_mean": 0.7365,
+        "roc_auc_std": 0.033,
+        "bal_acc_mean": 0.6399,
+        "bal_acc_std": 0.0207,
+        "brier_mean": 0.2164,
+        "brier_std": 0.017
+      },
+      "participant": {
+        "roc_auc_mean": 0.726,
+        "roc_auc_std": 0.0394,
+        "bal_acc_mean": 0.6562,
+        "bal_acc_std": 0.0177,
+        "brier_mean": 0.1865,
+        "brier_std": 0.0175
+      }
+    },
+    "extra_trees": {
+      "recording": {
+        "roc_auc_mean": 0.8113,
+        "roc_auc_std": 0.0312,
+        "bal_acc_mean": 0.6758,
+        "bal_acc_std": 0.0484,
+        "brier_mean": 0.1603,
+        "brier_std": 0.0101
+      },
+      "participant": {
+        "roc_auc_mean": 0.8385,
+        "roc_auc_std": 0.04,
+        "bal_acc_mean": 0.675,
+        "bal_acc_std": 0.0383,
+        "brier_mean": 0.1529,
+        "brier_std": 0.0099
+      }
+    },
+    "xgboost_cpu": {
+      "recording": {
+        "roc_auc_mean": 0.788,
+        "roc_auc_std": 0.0465,
+        "bal_acc_mean": 0.6767,
+        "bal_acc_std": 0.0571,
+        "brier_mean": 0.1618,
+        "brier_std": 0.0268
+      },
+      "participant": {
+        "roc_auc_mean": 0.8089,
+        "roc_auc_std": 0.0615,
+        "bal_acc_mean": 0.6792,
+        "bal_acc_std": 0.0557,
+        "brier_mean": 0.1382,
+        "brier_std": 0.025
+      }
+    },
+    "gradient_boosting": {
+      "recording": {
+        "roc_auc_mean": 0.7657,
+        "roc_auc_std": 0.0612,
+        "bal_acc_mean": 0.6588,
+        "bal_acc_std": 0.0333,
+        "brier_mean": 0.1739,
+        "brier_std": 0.0251
+      },
+      "participant": {
+        "roc_auc_mean": 0.775,
+        "roc_auc_std": 0.0743,
+        "bal_acc_mean": 0.6813,
+        "bal_acc_std": 0.0341,
+        "brier_mean": 0.1501,
+        "brier_std": 0.0248
+      }
+    }
+  },
+  "paired_comparisons_vs_baseline": {
+    "extra_trees": {
+      "participant_roc_auc_mean_diff": 0.1125,
+      "participant_roc_auc_wins": 10,
+      "participant_roc_auc_p_value": 4e-06,
+      "participant_brier_mean_diff": -0.0336,
+      "participant_brier_wins": 10
+    },
+    "xgboost_cpu": {
+      "participant_roc_auc_mean_diff": 0.0828,
+      "participant_roc_auc_wins": 9,
+      "participant_roc_auc_p_value": 0.000563,
+      "participant_brier_mean_diff": -0.0483,
+      "participant_brier_wins": 10
+    }
+  },
+  "participant_cohort_insights": {
+    "total_participants": 32,
+    "consistently_correct_participants": 22,
+    "majority_correct_participants": 24,
+    "persistent_false_positive_controls": [
+      "S13",
+      "S43",
+      "S49",
+      "S50"
+    ],
+    "persistent_false_negative_pd": [
+      "S25"
+    ],
+    "boundary_pd_subjects": [
+      "S08",
+      "S32",
+      "S44"
+    ]
+  },
+  "xgboost_cpu_vs_cuda": {
+    "hardware": {
+      "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "driver_version": "621.01"
+    },
+    "runtime_seconds": {
+      "xgboost_cpu": 3.936,
+      "xgboost_cuda": 10.583,
+      "cpu_speedup_ratio": 2.69
+    },
+    "logo_prediction_differences": {
+      "mean_absolute_difference": 0.021177,
+      "max_absolute_difference": 0.131703,
+      "correlation": 0.993264,
+      "discrete_prediction_disagreements": 4,
+      "total_recordings": 195
+    },
+    "metrics_comparison": {
+      "recording_sgkf_roc_auc": {
+        "cpu": 0.788,
+        "cuda": 0.7835
+      },
+      "recording_sgkf_brier": {
+        "cpu": 0.1618,
+        "cuda": 0.163
+      },
+      "participant_logo_roc_auc": {
+        "cpu": 0.796875,
+        "cuda": 0.796875
+      }
+    }
+  }
+}

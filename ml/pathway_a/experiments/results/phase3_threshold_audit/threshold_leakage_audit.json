@@ -1,0 +1,10 @@
+{
+  "audit_target": "Stage 3A threshold optimization and Stage 5 freeze",
+  "nested_inner_cv_verified": true,
+  "inner_cv_specification": "StratifiedGroupKFold(n_splits=3, shuffle=True) within outer training fold exclusively",
+  "leakage_assertion_in_code": "assert itrain_subjs.isdisjoint(itest_subjs) verified in compute_inner_oof_probabilities()",
+  "threshold_selection_data": "Thresholds chosen strictly on inner OOF training predictions",
+  "outer_test_evaluation": "Held-out outer test subject evaluated with inner-selected threshold without looking at test label",
+  "leakage_verdict": "NO_LEAKAGE",
+  "notes": "Stage 3A nested optimization code strictly avoided threshold selection leakage. The reported outer performance reflects truly unseen test subjects under nested thresholding."
+}

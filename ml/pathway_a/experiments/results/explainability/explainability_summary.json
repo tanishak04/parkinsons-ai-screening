@@ -1,0 +1,541 @@
+{
+  "stage": "stage_4_explainability_and_interpretation",
+  "model": {
+    "type": "ExtraTreesClassifier",
+    "parameters": {
+      "n_estimators": 100,
+      "max_depth": 4,
+      "min_samples_leaf": 3,
+      "class_weight": "balanced",
+      "random_state": 42
+    },
+    "preprocessing": "None (Tree invariant)"
+  },
+  "explainability_engine": {
+    "method": "shap.TreeExplainer",
+    "evaluation_scheme": "Out-of-Fold 32-Fold LOGO (No Train Leakage)",
+    "base_expected_value": 0.5
+  },
+  "global_feature_rankings": [
+    {
+      "rank": 1,
+      "feature": "spread1",
+      "mean_abs_shap": 0.04394,
+      "mean_push_to_pd": 0.05312,
+      "mean_push_to_healthy": -0.03046
+    },
+    {
+      "rank": 2,
+      "feature": "PPE",
+      "mean_abs_shap": 0.0291,
+      "mean_push_to_pd": 0.03223,
+      "mean_push_to_healthy": -0.02352
+    },
+    {
+      "rank": 3,
+      "feature": "MDVP:Fo(Hz)",
+      "mean_abs_shap": 0.02459,
+      "mean_push_to_pd": 0.02185,
+      "mean_push_to_healthy": -0.03521
+    },
+    {
+      "rank": 4,
+      "feature": "spread2",
+      "mean_abs_shap": 0.02387,
+      "mean_push_to_pd": 0.02643,
+      "mean_push_to_healthy": -0.02011
+    },
+    {
+      "rank": 5,
+      "feature": "MDVP:APQ",
+      "mean_abs_shap": 0.01863,
+      "mean_push_to_pd": 0.0295,
+      "mean_push_to_healthy": -0.0104
+    },
+    {
+      "rank": 6,
+      "feature": "MDVP:Shimmer",
+      "mean_abs_shap": 0.01692,
+      "mean_push_to_pd": 0.02428,
+      "mean_push_to_healthy": -0.01099
+    },
+    {
+      "rank": 7,
+      "feature": "MDVP:Flo(Hz)",
+      "mean_abs_shap": 0.01648,
+      "mean_push_to_pd": 0.01479,
+      "mean_push_to_healthy": -0.02614
+    },
+    {
+      "rank": 8,
+      "feature": "MDVP:Shimmer(dB)",
+      "mean_abs_shap": 0.01487,
+      "mean_push_to_pd": 0.01795,
+      "mean_push_to_healthy": -0.01112
+    },
+    {
+      "rank": 9,
+      "feature": "Shimmer:APQ5",
+      "mean_abs_shap": 0.01435,
+      "mean_push_to_pd": 0.01941,
+      "mean_push_to_healthy": -0.00954
+    },
+    {
+      "rank": 10,
+      "feature": "Shimmer:APQ3",
+      "mean_abs_shap": 0.01425,
+      "mean_push_to_pd": 0.01774,
+      "mean_push_to_healthy": -0.01057
+    },
+    {
+      "rank": 11,
+      "feature": "MDVP:RAP",
+      "mean_abs_shap": 0.01254,
+      "mean_push_to_pd": 0.01351,
+      "mean_push_to_healthy": -0.011
+    },
+    {
+      "rank": 12,
+      "feature": "Shimmer:DDA",
+      "mean_abs_shap": 0.01183,
+      "mean_push_to_pd": 0.01717,
+      "mean_push_to_healthy": -0.00834
+    },
+    {
+      "rank": 13,
+      "feature": "DFA",
+      "mean_abs_shap": 0.0118,
+      "mean_push_to_pd": 0.01159,
+      "mean_push_to_healthy": -0.01224
+    },
+    {
+      "rank": 14,
+      "feature": "D2",
+      "mean_abs_shap": 0.01007,
+      "mean_push_to_pd": 0.01146,
+      "mean_push_to_healthy": -0.00819
+    },
+    {
+      "rank": 15,
+      "feature": "RPDE",
+      "mean_abs_shap": 0.00997,
+      "mean_push_to_pd": 0.0125,
+      "mean_push_to_healthy": -0.00775
+    },
+    {
+      "rank": 16,
+      "feature": "MDVP:PPQ",
+      "mean_abs_shap": 0.00978,
+      "mean_push_to_pd": 0.01189,
+      "mean_push_to_healthy": -0.00751
+    },
+    {
+      "rank": 17,
+      "feature": "MDVP:Jitter(Abs)",
+      "mean_abs_shap": 0.00852,
+      "mean_push_to_pd": 0.00856,
+      "mean_push_to_healthy": -0.0084
+    },
+    {
+      "rank": 18,
+      "feature": "Jitter:DDP",
+      "mean_abs_shap": 0.0082,
+      "mean_push_to_pd": 0.00875,
+      "mean_push_to_healthy": -0.00734
+    },
+    {
+      "rank": 19,
+      "feature": "MDVP:Fhi(Hz)",
+      "mean_abs_shap": 0.00768,
+      "mean_push_to_pd": 0.00841,
+      "mean_push_to_healthy": -0.00643
+    },
+    {
+      "rank": 20,
+      "feature": "MDVP:Jitter(%)",
+      "mean_abs_shap": 0.00725,
+      "mean_push_to_pd": 0.00811,
+      "mean_push_to_healthy": -0.00592
+    },
+    {
+      "rank": 21,
+      "feature": "NHR",
+      "mean_abs_shap": 0.00645,
+      "mean_push_to_pd": 0.00735,
+      "mean_push_to_healthy": -0.00513
+    },
+    {
+      "rank": 22,
+      "feature": "HNR",
+      "mean_abs_shap": 0.00456,
+      "mean_push_to_pd": 0.00414,
+      "mean_push_to_healthy": -0.00536
+    }
+  ],
+  "collinearity_and_redundancy_audit": {
+    "flagged_high_correlation_pairs": [
+      {
+        "feature_1": "MDVP:RAP",
+        "feature_2": "Jitter:DDP",
+        "pearson_r": 1.0,
+        "relationship": "Exact Multiple"
+      },
+      {
+        "feature_1": "Shimmer:APQ3",
+        "feature_2": "Shimmer:DDA",
+        "pearson_r": 1.0,
+        "relationship": "Exact Multiple"
+      },
+      {
+        "feature_1": "MDVP:Jitter(%)",
+        "feature_2": "MDVP:RAP",
+        "pearson_r": 0.9903,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Jitter(%)",
+        "feature_2": "Jitter:DDP",
+        "pearson_r": 0.9903,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer",
+        "feature_2": "Shimmer:APQ3",
+        "pearson_r": 0.9876,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer",
+        "feature_2": "Shimmer:DDA",
+        "pearson_r": 0.9876,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer",
+        "feature_2": "MDVP:Shimmer(dB)",
+        "pearson_r": 0.9873,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer",
+        "feature_2": "Shimmer:APQ5",
+        "pearson_r": 0.9828,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Jitter(%)",
+        "feature_2": "MDVP:PPQ",
+        "pearson_r": 0.9743,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer(dB)",
+        "feature_2": "Shimmer:APQ5",
+        "pearson_r": 0.9738,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer(dB)",
+        "feature_2": "Shimmer:APQ3",
+        "pearson_r": 0.9632,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer(dB)",
+        "feature_2": "Shimmer:DDA",
+        "pearson_r": 0.9632,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "spread1",
+        "feature_2": "PPE",
+        "pearson_r": 0.9624,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer(dB)",
+        "feature_2": "MDVP:APQ",
+        "pearson_r": 0.961,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "Shimmer:APQ3",
+        "feature_2": "Shimmer:APQ5",
+        "pearson_r": 0.9601,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "Shimmer:APQ5",
+        "feature_2": "Shimmer:DDA",
+        "pearson_r": 0.9601,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:RAP",
+        "feature_2": "MDVP:PPQ",
+        "pearson_r": 0.9573,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:PPQ",
+        "feature_2": "Jitter:DDP",
+        "pearson_r": 0.9573,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Shimmer",
+        "feature_2": "MDVP:APQ",
+        "pearson_r": 0.9501,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "Shimmer:APQ5",
+        "feature_2": "MDVP:APQ",
+        "pearson_r": 0.9491,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Jitter(%)",
+        "feature_2": "MDVP:Jitter(Abs)",
+        "pearson_r": 0.9357,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Jitter(Abs)",
+        "feature_2": "MDVP:RAP",
+        "pearson_r": 0.9229,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Jitter(Abs)",
+        "feature_2": "Jitter:DDP",
+        "pearson_r": 0.9229,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:RAP",
+        "feature_2": "NHR",
+        "pearson_r": 0.9195,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "Jitter:DDP",
+        "feature_2": "NHR",
+        "pearson_r": 0.9195,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Jitter(%)",
+        "feature_2": "NHR",
+        "pearson_r": 0.907,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:Jitter(Abs)",
+        "feature_2": "MDVP:PPQ",
+        "pearson_r": 0.8978,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "Shimmer:APQ3",
+        "feature_2": "MDVP:APQ",
+        "pearson_r": 0.8966,
+        "relationship": "High Collinearity"
+      },
+      {
+        "feature_1": "MDVP:APQ",
+        "feature_2": "Shimmer:DDA",
+        "pearson_r": 0.8966,
+        "relationship": "High Collinearity"
+      }
+    ],
+    "interpretability_implication": "TreeExplainer splits attribution between mathematically collinear features (e.g., Jitter:DDP and MDVP:RAP; Shimmer:DDA and Shimmer:APQ3; spread1 and PPE). Feature importance indicates model influence, not biological independence or unique causal contribution."
+  },
+  "representative_local_explanations": {
+    "S01": {
+      "subject_id": "S01",
+      "case_type": "True Positive (PD)",
+      "clinical_status": "Parkinson's (1)",
+      "oof_probability": 0.9096,
+      "base_value": 0.5,
+      "top_drivers_pushing_to_pd": [
+        {
+          "feature": "spread1",
+          "shap_value": 0.0651
+        },
+        {
+          "feature": "PPE",
+          "shap_value": 0.0468
+        },
+        {
+          "feature": "spread2",
+          "shap_value": 0.0323
+        },
+        {
+          "feature": "MDVP:Shimmer",
+          "shap_value": 0.0308
+        },
+        {
+          "feature": "MDVP:APQ",
+          "shap_value": 0.0295
+        }
+      ],
+      "top_drivers_pushing_to_healthy": [
+        {
+          "feature": "RPDE",
+          "shap_value": -0.0225
+        }
+      ]
+    },
+    "S25": {
+      "subject_id": "S25",
+      "case_type": "False Negative (PD)",
+      "clinical_status": "Parkinson's (1)",
+      "oof_probability": 0.2878,
+      "base_value": 0.5,
+      "top_drivers_pushing_to_pd": [
+        {
+          "feature": "MDVP:Fo(Hz)",
+          "shap_value": 0.0255
+        },
+        {
+          "feature": "MDVP:Flo(Hz)",
+          "shap_value": 0.0174
+        },
+        {
+          "feature": "MDVP:Fhi(Hz)",
+          "shap_value": 0.0082
+        },
+        {
+          "feature": "DFA",
+          "shap_value": 0.0015
+        }
+      ],
+      "top_drivers_pushing_to_healthy": [
+        {
+          "feature": "spread1",
+          "shap_value": -0.0431
+        },
+        {
+          "feature": "PPE",
+          "shap_value": -0.0313
+        },
+        {
+          "feature": "HNR",
+          "shap_value": -0.0196
+        },
+        {
+          "feature": "MDVP:Shimmer",
+          "shap_value": -0.0167
+        },
+        {
+          "feature": "MDVP:Shimmer(dB)",
+          "shap_value": -0.0166
+        }
+      ]
+    },
+    "S50": {
+      "subject_id": "S50",
+      "case_type": "False Positive (Healthy)",
+      "clinical_status": "Healthy Control (0)",
+      "oof_probability": 0.6684,
+      "base_value": 0.5,
+      "top_drivers_pushing_to_pd": [
+        {
+          "feature": "MDVP:Flo(Hz)",
+          "shap_value": 0.0378
+        },
+        {
+          "feature": "MDVP:RAP",
+          "shap_value": 0.027
+        },
+        {
+          "feature": "NHR",
+          "shap_value": 0.0212
+        },
+        {
+          "feature": "D2",
+          "shap_value": 0.0161
+        },
+        {
+          "feature": "MDVP:Shimmer(dB)",
+          "shap_value": 0.0155
+        }
+      ],
+      "top_drivers_pushing_to_healthy": [
+        {
+          "feature": "spread1",
+          "shap_value": -0.0185
+        },
+        {
+          "feature": "spread2",
+          "shap_value": -0.0136
+        },
+        {
+          "feature": "MDVP:Fo(Hz)",
+          "shap_value": -0.0054
+        },
+        {
+          "feature": "PPE",
+          "shap_value": -0.0049
+        },
+        {
+          "feature": "DFA",
+          "shap_value": -0.0048
+        }
+      ]
+    },
+    "S44": {
+      "subject_id": "S44",
+      "case_type": "Borderline Prediction (PD)",
+      "clinical_status": "Parkinson's (1)",
+      "oof_probability": 0.4521,
+      "base_value": 0.5,
+      "top_drivers_pushing_to_pd": [
+        {
+          "feature": "MDVP:Fo(Hz)",
+          "shap_value": 0.0218
+        },
+        {
+          "feature": "MDVP:Flo(Hz)",
+          "shap_value": 0.0118
+        },
+        {
+          "feature": "MDVP:Fhi(Hz)",
+          "shap_value": 0.0109
+        },
+        {
+          "feature": "DFA",
+          "shap_value": 0.01
+        },
+        {
+          "feature": "D2",
+          "shap_value": 0.006
+        }
+      ],
+      "top_drivers_pushing_to_healthy": [
+        {
+          "feature": "MDVP:Shimmer",
+          "shap_value": -0.0123
+        },
+        {
+          "feature": "Shimmer:APQ3",
+          "shap_value": -0.0095
+        },
+        {
+          "feature": "MDVP:Shimmer(dB)",
+          "shap_value": -0.0093
+        },
+        {
+          "feature": "Shimmer:DDA",
+          "shap_value": -0.0093
+        },
+        {
+          "feature": "MDVP:APQ",
+          "shap_value": -0.0085
+        }
+      ]
+    }
+  },
+  "causality_disclaimer": "CAUSALITY DISCLAIMER: SHAP values quantify the mathematical contribution of input features to model tree predictions. They do NOT establish medical, biological, or physiological causation. Elevated acoustic variance correlates with dysphonia in this dataset, but does not diagnose neurological etiology."
+}

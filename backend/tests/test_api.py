@@ -4,9 +4,16 @@ from contextlib import contextmanager
 import asyncio
 
 import httpx
+import pytest
 from fastapi.testclient import TestClient
 
 from app.main import create_app
+from app.services.model_client import (
+    InvalidModelResponse,
+    ModelClient,
+    ModelServerRejectedRequest,
+    ModelServerUnavailable,
+)
 
 
 SAMPLE_FEATURES = {
@@ -149,4 +156,61 @@ def test_predict_rejects_non_finite_values():
         response = client.post("/predict", json=payload)
 
     assert response.status_code == 422
+
+
+@pytest.mark.asyncio
+async def test_model_client_predict_et13_success():
+    from app.core.config import Settings
+
+    et13_data = {"MDVP:RAP": 0.0037}
+    expected_result = {"prediction": 1, "label": "PARKINSONS"}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        assert request.url.path == "/predict/et13"
+        return httpx.Response(200, json=expected_result)
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as mock_http:
+        client = ModelClient(Settings(), client=mock_http)
+        result = await client.predict_et13(et13_data)
+        assert result == expected_result
+
+
+@pytest.mark.asyncio
+async def test_model_client_predict_et13_rejected():
+    from app.core.config import Settings
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(400, json={"error": "Invalid features"})
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as mock_http:
+        client = ModelClient(Settings(), client=mock_http)
+        with pytest.raises(ModelServerRejectedRequest, match="Model server rejected"):
+            await client.predict_et13({"MDVP:RAP": 0.0037})
+
+
+@pytest.mark.asyncio
+async def test_model_client_predict_et13_invalid_json():
+    from app.core.config import Settings
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, content=b"not-json")
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as mock_http:
+        client = ModelClient(Settings(), client=mock_http)
+        with pytest.raises(InvalidModelResponse, match="invalid JSON"):
+            await client.predict_et13({"MDVP:RAP": 0.0037})
+
+
+@pytest.mark.asyncio
+async def test_model_client_predict_et13_non_dict_json():
+    from app.core.config import Settings
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json=[1, 2, 3])
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as mock_http:
+        client = ModelClient(Settings(), client=mock_http)
+        with pytest.raises(InvalidModelResponse, match="must be a JSON object"):
+            await client.predict_et13({"MDVP:RAP": 0.0037})
+
 

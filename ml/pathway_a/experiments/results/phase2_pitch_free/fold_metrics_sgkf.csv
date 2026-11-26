@@ -1,0 +1,226 @@
+candidate_id,candidate_name,repeat,seed,fold,sub_balanced_accuracy,sub_sensitivity,sub_specificity,sub_roc_auc,sub_f1
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",0,42,0,0.5,1.0,0.0,1.0,0.9090909090909091
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",0,42,1,0.7,0.4,1.0,0.7,0.5714285714285714
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",0,42,2,0.625,0.75,0.5,0.625,0.75
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",0,42,3,0.8,0.6,1.0,0.7,0.75
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",0,42,4,0.4,0.8,0.0,0.6,0.8
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",1,0,0,0.7,0.4,1.0,0.6,0.5714285714285714
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",1,0,1,0.5,1.0,0.0,1.0,0.9090909090909091
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",1,0,2,0.375,0.75,0.0,0.5,0.6666666666666666
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",1,0,3,0.9,0.8,1.0,0.8,0.8888888888888888
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",1,0,4,0.8,0.6,1.0,0.9,0.75
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",2,1,0,0.375,0.25,0.5,0.5,0.3333333333333333
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",2,1,1,0.4,0.8,0.0,0.4,0.8
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",2,1,2,0.9,0.8,1.0,0.8,0.8888888888888888
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",2,1,3,0.9,0.8,1.0,1.0,0.8888888888888888
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",2,1,4,0.55,0.6,0.5,0.8,0.6666666666666666
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",3,2,0,0.55,0.6,0.5,0.7,0.6666666666666666
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",3,2,1,0.8,0.6,1.0,1.0,0.75
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",3,2,2,0.625,0.75,0.5,0.75,0.75
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",3,2,3,0.65,0.8,0.5,0.8,0.8
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",3,2,4,0.9,0.8,1.0,0.8,0.8888888888888888
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",4,3,0,0.75,1.0,0.5,1.0,0.9090909090909091
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",4,3,1,0.3,0.6,0.0,0.6,0.6666666666666666
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",4,3,2,0.625,0.75,0.5,0.75,0.75
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",4,3,3,0.8,0.6,1.0,0.8,0.75
+logistic_regression_std,"Logistic Regression (StandardScaler, Balanced)",4,3,4,0.7,0.4,1.0,0.6,0.5714285714285714
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",0,42,0,0.5,1.0,0.0,1.0,0.9090909090909091
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",0,42,1,0.7,0.4,1.0,0.9,0.5714285714285714
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",0,42,2,0.5,0.5,0.5,0.5,0.5714285714285714
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",0,42,3,0.8,0.6,1.0,0.7,0.75
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",0,42,4,0.4,0.8,0.0,0.6,0.8
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",1,0,0,0.7,0.4,1.0,0.4,0.5714285714285714
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",1,0,1,0.5,1.0,0.0,1.0,0.9090909090909091
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",1,0,2,0.375,0.75,0.0,0.5,0.6666666666666666
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",1,0,3,0.9,0.8,1.0,0.8,0.8888888888888888
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",1,0,4,0.8,0.6,1.0,0.8,0.75
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",2,1,0,0.375,0.25,0.5,0.5,0.3333333333333333
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",2,1,1,0.4,0.8,0.0,0.4,0.8
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",2,1,2,0.9,0.8,1.0,0.8,0.8888888888888888
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",2,1,3,0.9,0.8,1.0,1.0,0.8888888888888888
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",2,1,4,0.55,0.6,0.5,0.8,0.6666666666666666
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",3,2,0,0.55,0.6,0.5,0.7,0.6666666666666666
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",3,2,1,0.8,0.6,1.0,1.0,0.75
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",3,2,2,0.375,0.75,0.0,0.625,0.6666666666666666
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",3,2,3,0.65,0.8,0.5,0.8,0.8
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",3,2,4,0.9,0.8,1.0,0.8,0.8888888888888888
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",4,3,0,0.75,1.0,0.5,1.0,0.9090909090909091
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",4,3,1,0.4,0.8,0.0,0.4,0.8
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",4,3,2,0.625,0.75,0.5,0.75,0.75
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",4,3,3,0.8,0.6,1.0,0.8,0.75
+logistic_regression_robust,"Logistic Regression (RobustScaler, Balanced)",4,3,4,0.7,0.4,1.0,0.6,0.5714285714285714
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",0,42,0,0.5,1.0,0.0,1.0,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",0,42,1,0.75,1.0,0.5,0.8,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",0,42,2,0.75,1.0,0.5,0.625,0.8888888888888888
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",0,42,3,0.4,0.8,0.0,0.7,0.7272727272727273
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",0,42,4,0.5,1.0,0.0,0.6,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",1,0,0,0.5,1.0,0.0,0.8,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",1,0,1,0.5,1.0,0.0,1.0,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",1,0,2,0.375,0.75,0.0,0.5,0.6666666666666666
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",1,0,3,0.9,0.8,1.0,1.0,0.8888888888888888
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",1,0,4,0.5,1.0,0.0,0.6,0.8333333333333334
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",2,1,0,0.625,0.75,0.5,0.625,0.75
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",2,1,1,0.4,0.8,0.0,0.4,0.8
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",2,1,2,0.5,1.0,0.0,0.8,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",2,1,3,0.5,1.0,0.0,1.0,0.8333333333333334
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",2,1,4,0.75,1.0,0.5,0.9,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",3,2,0,0.4,0.8,0.0,0.5,0.7272727272727273
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",3,2,1,1.0,1.0,1.0,1.0,1.0
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",3,2,2,0.5,1.0,0.0,0.875,0.8
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",3,2,3,0.75,1.0,0.5,0.9,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",3,2,4,0.4,0.8,0.0,0.8,0.8
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",4,3,0,0.5,1.0,0.0,1.0,0.8333333333333334
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",4,3,1,0.5,1.0,0.0,0.6,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",4,3,2,0.5,1.0,0.0,0.875,0.8
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",4,3,3,0.75,1.0,0.5,0.8,0.9090909090909091
+svc_rbf,"Support Vector Classifier (RBF Kernel, C=1.0)",4,3,4,0.3,0.6,0.0,0.6,0.6666666666666666
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",0,42,0,0.5,1.0,0.0,1.0,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",0,42,1,0.4,0.8,0.0,0.8,0.7272727272727273
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",0,42,2,0.75,1.0,0.5,0.625,0.8888888888888888
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",0,42,3,0.4,0.8,0.0,0.7,0.7272727272727273
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",0,42,4,0.5,1.0,0.0,0.6,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",1,0,0,0.4,0.8,0.0,0.4,0.8
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",1,0,1,0.5,1.0,0.0,0.6,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",1,0,2,0.5,1.0,0.0,0.5,0.8
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",1,0,3,0.65,0.8,0.5,0.8,0.8
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",1,0,4,0.65,0.8,0.5,0.8,0.8
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",2,1,0,0.625,0.75,0.5,0.625,0.75
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",2,1,1,0.4,0.8,0.0,0.4,0.8
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",2,1,2,0.5,1.0,0.0,0.8,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",2,1,3,0.75,1.0,0.5,1.0,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",2,1,4,0.5,1.0,0.0,0.8,0.8333333333333334
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",3,2,0,0.75,1.0,0.5,0.7,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",3,2,1,0.5,1.0,0.0,0.8,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",3,2,2,0.5,1.0,0.0,0.75,0.8
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",3,2,3,0.75,1.0,0.5,0.8,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",3,2,4,0.4,0.8,0.0,0.8,0.8
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",4,3,0,0.5,1.0,0.0,1.0,0.8333333333333334
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",4,3,1,0.5,1.0,0.0,0.6,0.9090909090909091
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",4,3,2,0.75,1.0,0.5,0.75,0.8888888888888888
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",4,3,3,0.4,0.8,0.0,0.8,0.7272727272727273
+svc_linear,"Support Vector Classifier (Linear Kernel, C=1.0)",4,3,4,0.4,0.8,0.0,0.4,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",0,42,0,0.5,1.0,0.0,0.8,0.9090909090909091
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",0,42,1,0.65,0.8,0.5,0.8,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",0,42,2,0.75,1.0,0.5,0.75,0.8888888888888888
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",0,42,3,0.65,0.8,0.5,0.7,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",0,42,4,0.5,1.0,0.0,1.0,0.9090909090909091
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",1,0,0,0.4,0.8,0.0,0.4,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",1,0,1,1.0,1.0,1.0,1.0,1.0
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",1,0,2,0.375,0.75,0.0,0.625,0.6666666666666666
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",1,0,3,0.9,0.8,1.0,0.8,0.8888888888888888
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",1,0,4,0.65,0.8,0.5,0.7,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",2,1,0,0.625,0.25,1.0,0.75,0.4
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",2,1,1,0.4,0.8,0.0,0.4,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",2,1,2,0.4,0.8,0.0,0.8,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",2,1,3,0.75,1.0,0.5,0.8,0.9090909090909091
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",2,1,4,0.55,0.6,0.5,0.8,0.6666666666666666
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",3,2,0,0.3,0.6,0.0,0.5,0.6
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",3,2,1,0.8,0.6,1.0,1.0,0.75
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",3,2,2,0.5,1.0,0.0,0.375,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",3,2,3,0.65,0.8,0.5,0.9,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",3,2,4,0.4,0.8,0.0,0.8,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",4,3,0,0.5,1.0,0.0,0.9,0.8333333333333334
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",4,3,1,0.4,0.8,0.0,0.6,0.8
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",4,3,2,0.875,0.75,1.0,1.0,0.8571428571428571
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",4,3,3,0.35,0.2,0.5,0.5,0.2857142857142857
+random_forest,"Random Forest (d=4, leaf=3, Balanced)",4,3,4,0.3,0.6,0.0,0.6,0.6666666666666666
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",0,42,0,1.0,1.0,1.0,1.0,1.0
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",0,42,1,0.8,0.6,1.0,0.8,0.75
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",0,42,2,0.5,0.5,0.5,0.75,0.5714285714285714
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",0,42,3,0.8,0.6,1.0,0.7,0.75
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",0,42,4,0.9,0.8,1.0,1.0,0.8888888888888888
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",1,0,0,0.9,0.8,1.0,1.0,0.8888888888888888
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",1,0,1,1.0,1.0,1.0,1.0,1.0
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",1,0,2,0.625,0.75,0.5,0.625,0.75
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",1,0,3,0.9,0.8,1.0,0.8,0.8888888888888888
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",1,0,4,0.8,0.6,1.0,0.8,0.75
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",2,1,0,0.625,0.25,1.0,0.75,0.4
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",2,1,1,0.4,0.8,0.0,0.4,0.8
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",2,1,2,0.9,0.8,1.0,0.8,0.8888888888888888
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",2,1,3,1.0,1.0,1.0,1.0,1.0
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",2,1,4,0.8,0.6,1.0,0.9,0.75
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",3,2,0,0.55,0.6,0.5,0.7,0.6666666666666666
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",3,2,1,0.8,0.6,1.0,1.0,0.75
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",3,2,2,1.0,1.0,1.0,1.0,1.0
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",3,2,3,0.9,0.8,1.0,0.9,0.8888888888888888
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",3,2,4,0.9,0.8,1.0,0.8,0.8888888888888888
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",4,3,0,0.75,1.0,0.5,1.0,0.9090909090909091
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",4,3,1,0.3,0.6,0.0,0.6,0.6666666666666666
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",4,3,2,0.875,0.75,1.0,1.0,0.8571428571428571
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",4,3,3,0.6,0.2,1.0,0.8,0.3333333333333333
+extratrees_default,"ExtraTrees (d=4, leaf=3, Balanced)",4,3,4,0.8,0.6,1.0,0.6,0.75
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",0,42,0,1.0,1.0,1.0,1.0,1.0
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",0,42,1,0.8,0.6,1.0,0.9,0.75
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",0,42,2,0.5,0.5,0.5,0.75,0.5714285714285714
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",0,42,3,0.7,0.4,1.0,0.7,0.5714285714285714
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",0,42,4,0.9,0.8,1.0,1.0,0.8888888888888888
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",1,0,0,0.9,0.8,1.0,1.0,0.8888888888888888
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",1,0,1,1.0,1.0,1.0,1.0,1.0
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",1,0,2,0.5,0.5,0.5,0.625,0.5714285714285714
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",1,0,3,0.9,0.8,1.0,0.8,0.8888888888888888
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",1,0,4,0.8,0.6,1.0,0.9,0.75
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",2,1,0,0.625,0.25,1.0,0.75,0.4
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",2,1,1,0.4,0.8,0.0,0.4,0.8
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",2,1,2,0.9,0.8,1.0,0.8,0.8888888888888888
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",2,1,3,1.0,1.0,1.0,1.0,1.0
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",2,1,4,0.7,0.4,1.0,0.9,0.5714285714285714
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",3,2,0,0.55,0.6,0.5,0.8,0.6666666666666666
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",3,2,1,0.8,0.6,1.0,1.0,0.75
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",3,2,2,1.0,1.0,1.0,1.0,1.0
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",3,2,3,0.9,0.8,1.0,0.9,0.8888888888888888
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",3,2,4,0.9,0.8,1.0,0.8,0.8888888888888888
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",4,3,0,1.0,1.0,1.0,1.0,1.0
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",4,3,1,0.3,0.6,0.0,0.6,0.6666666666666666
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",4,3,2,0.875,0.75,1.0,1.0,0.8571428571428571
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",4,3,3,0.6,0.2,1.0,0.8,0.3333333333333333
+extratrees_d3,"ExtraTrees (d=3, leaf=3, Balanced - Lower Variance)",4,3,4,0.8,0.6,1.0,0.6,0.75
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",0,42,0,0.5,1.0,0.0,0.8,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",0,42,1,0.75,1.0,0.5,0.8,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",0,42,2,0.625,0.75,0.5,0.625,0.75
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",0,42,3,0.4,0.8,0.0,0.5,0.7272727272727273
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",0,42,4,0.5,1.0,0.0,0.6,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",1,0,0,0.5,1.0,0.0,0.0,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",1,0,1,0.5,1.0,0.0,0.6,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",1,0,2,0.5,1.0,0.0,0.625,0.8
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",1,0,3,0.9,0.8,1.0,0.9,0.8888888888888888
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",1,0,4,0.5,1.0,0.0,0.7,0.8333333333333334
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",2,1,0,0.625,0.75,0.5,0.625,0.75
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",2,1,1,0.5,1.0,0.0,0.4,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",2,1,2,0.5,1.0,0.0,0.6,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",2,1,3,0.5,1.0,0.0,0.9,0.8333333333333334
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",2,1,4,0.75,1.0,0.5,0.7,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",3,2,0,0.5,1.0,0.0,0.6,0.8333333333333334
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",3,2,1,1.0,1.0,1.0,1.0,1.0
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",3,2,2,0.5,1.0,0.0,0.375,0.8
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",3,2,3,0.75,1.0,0.5,0.7,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",3,2,4,0.3,0.6,0.0,0.6,0.6666666666666666
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",4,3,0,0.5,1.0,0.0,0.7,0.8333333333333334
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",4,3,1,0.5,1.0,0.0,0.4,0.9090909090909091
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",4,3,2,0.75,1.0,0.5,0.75,0.8888888888888888
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",4,3,3,0.5,1.0,0.0,0.4,0.8333333333333334
+gradient_boosting,"Gradient Boosting (n=100, d=3, lr=0.05)",4,3,4,0.4,0.8,0.0,0.2,0.8
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",0,42,0,0.5,1.0,0.0,0.4,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",0,42,1,0.75,1.0,0.5,1.0,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",0,42,2,0.75,1.0,0.5,0.5,0.8888888888888888
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",0,42,3,0.4,0.8,0.0,0.5,0.7272727272727273
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",0,42,4,0.5,1.0,0.0,0.6,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",1,0,0,0.5,1.0,0.0,0.0,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",1,0,1,0.5,1.0,0.0,0.4,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",1,0,2,0.5,1.0,0.0,0.625,0.8
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",1,0,3,0.9,0.8,1.0,0.9,0.8888888888888888
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",1,0,4,0.5,1.0,0.0,0.7,0.8333333333333334
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",2,1,0,0.625,0.75,0.5,0.625,0.75
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",2,1,1,0.4,0.8,0.0,0.4,0.8
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",2,1,2,0.5,1.0,0.0,0.6,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",2,1,3,0.75,1.0,0.5,0.8,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",2,1,4,0.65,0.8,0.5,0.7,0.8
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",3,2,0,0.4,0.8,0.0,0.5,0.7272727272727273
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",3,2,1,1.0,1.0,1.0,1.0,1.0
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",3,2,2,0.375,0.75,0.0,0.375,0.6666666666666666
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",3,2,3,0.75,1.0,0.5,0.7,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",3,2,4,0.3,0.6,0.0,0.6,0.6666666666666666
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",4,3,0,0.5,1.0,0.0,0.8,0.8333333333333334
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",4,3,1,0.5,1.0,0.0,0.4,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",4,3,2,0.625,0.75,0.5,0.75,0.75
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",4,3,3,0.75,1.0,0.5,0.5,0.9090909090909091
+hist_gradient_boosting,"HistGradientBoosting (d=3, leaf=3, Balanced)",4,3,4,0.4,0.8,0.0,0.2,0.8

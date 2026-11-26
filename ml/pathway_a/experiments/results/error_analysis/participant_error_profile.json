@@ -1,0 +1,681 @@
+{
+  "analysis": "stage_3b_participant_level_error_analysis",
+  "dataset": "UCI Parkinson's (195 rows, 32 subjects)",
+  "cohort_structure": {
+    "total_participants": 32,
+    "parkinsons_participants": 24,
+    "healthy_participants": 8
+  },
+  "performance_metrics": {
+    "logo_baseline_0.50": {
+      "accuracy": 0.75,
+      "precision": 0.8333333333333334,
+      "recall_sensitivity": 0.8333333333333334,
+      "specificity": 0.5,
+      "f1": 0.8333333333333334,
+      "balanced_accuracy": 0.6666666666666667,
+      "tn": 4,
+      "fp": 4,
+      "fn": 4,
+      "tp": 20
+    },
+    "logo_constrained_sens_875": {
+      "accuracy": 0.78125,
+      "precision": 0.84,
+      "recall_sensitivity": 0.875,
+      "specificity": 0.5,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.6875,
+      "tn": 4,
+      "fp": 4,
+      "fn": 3,
+      "tp": 21
+    }
+  },
+  "error_cohorts": {
+    "clean_healthy_controls_tn": [
+      "S07",
+      "S10",
+      "S17",
+      "S42"
+    ],
+    "persistent_false_positives_fp": [
+      "S13",
+      "S43",
+      "S49",
+      "S50"
+    ],
+    "persistent_false_negatives_fn": [
+      "S08",
+      "S25",
+      "S32"
+    ],
+    "detected_parkinsons_tp": [
+      "S01",
+      "S02",
+      "S04",
+      "S05",
+      "S06",
+      "S16",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22",
+      "S24",
+      "S26",
+      "S27",
+      "S31",
+      "S33",
+      "S34",
+      "S35",
+      "S37",
+      "S39",
+      "S44"
+    ],
+    "borderline_participants": [
+      "S44",
+      "S26"
+    ]
+  },
+  "acoustic_mechanisms": {
+    "false_positive_drivers": [
+      {
+        "feature": "MDVP:Flo(Hz)",
+        "zscore_diff_vs_clean_controls": -2.445
+      },
+      {
+        "feature": "MDVP:Fo(Hz)",
+        "zscore_diff_vs_clean_controls": -2.15
+      },
+      {
+        "feature": "spread1",
+        "zscore_diff_vs_clean_controls": 0.934
+      },
+      {
+        "feature": "spread2",
+        "zscore_diff_vs_clean_controls": 0.933
+      },
+      {
+        "feature": "RPDE",
+        "zscore_diff_vs_clean_controls": 0.854
+      },
+      {
+        "feature": "MDVP:Jitter(Abs)",
+        "zscore_diff_vs_clean_controls": 0.745
+      }
+    ],
+    "false_negative_drivers": [
+      {
+        "feature": "RPDE",
+        "zscore_diff_vs_clean_pd": -1.565
+      },
+      {
+        "feature": "HNR",
+        "zscore_diff_vs_clean_pd": 1.468
+      },
+      {
+        "feature": "Shimmer:DDA",
+        "zscore_diff_vs_clean_pd": -1.403
+      },
+      {
+        "feature": "Shimmer:APQ3",
+        "zscore_diff_vs_clean_pd": -1.403
+      },
+      {
+        "feature": "MDVP:Shimmer",
+        "zscore_diff_vs_clean_pd": -1.361
+      },
+      {
+        "feature": "spread1",
+        "zscore_diff_vs_clean_pd": -1.33
+      }
+    ]
+  },
+  "participants": [
+    {
+      "subject_id": "S01",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.9096,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.4196,
+      "sgkf_mean_prob": 0.9237,
+      "sgkf_std_prob": 0.0164,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "Shimmer:APQ5": 2.055,
+        "DFA": 1.923,
+        "PPE": 1.845
+      }
+    },
+    {
+      "subject_id": "S02",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.6407,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.1707,
+      "sgkf_mean_prob": 0.669,
+      "sgkf_std_prob": 0.0494,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "MDVP:Fo(Hz)": -1.321,
+        "spread2": 1.198,
+        "MDVP:Fhi(Hz)": -1.175
+      }
+    },
+    {
+      "subject_id": "S04",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.54,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.06,
+      "sgkf_mean_prob": 0.5735,
+      "sgkf_std_prob": 0.0308,
+      "sgkf_error_rate_10seeds": 0.1,
+      "top_acoustic_deviations": {
+        "DFA": -1.346,
+        "MDVP:Flo(Hz)": -0.764,
+        "Shimmer:DDA": -0.694
+      }
+    },
+    {
+      "subject_id": "S05",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.8936,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.4136,
+      "sgkf_mean_prob": 0.8917,
+      "sgkf_std_prob": 0.0251,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "MDVP:APQ": 1.376,
+        "RPDE": 1.343,
+        "D2": 1.314
+      }
+    },
+    {
+      "subject_id": "S06",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.5362,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.0962,
+      "sgkf_mean_prob": 0.5562,
+      "sgkf_std_prob": 0.0311,
+      "sgkf_error_rate_10seeds": 0.1,
+      "top_acoustic_deviations": {
+        "MDVP:Flo(Hz)": -1.01,
+        "RPDE": -0.682,
+        "HNR": 0.669
+      }
+    },
+    {
+      "subject_id": "S07",
+      "clinical_status": "Healthy Control",
+      "y_true": 0,
+      "logo_mean_prob": 0.3468,
+      "logo_category_base": "TN",
+      "logo_category_const": "TN",
+      "logo_margin_to_threshold": 0.1432,
+      "sgkf_mean_prob": 0.3642,
+      "sgkf_std_prob": 0.0616,
+      "sgkf_error_rate_10seeds": 0.2,
+      "top_acoustic_deviations": {
+        "HNR": 2.157,
+        "MDVP:Flo(Hz)": 2.075,
+        "spread1": -1.95
+      }
+    },
+    {
+      "subject_id": "S08",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.3909,
+      "logo_category_base": "FN",
+      "logo_category_const": "FN",
+      "logo_margin_to_threshold": 0.0691,
+      "sgkf_mean_prob": 0.3803,
+      "sgkf_std_prob": 0.0351,
+      "sgkf_error_rate_10seeds": 1.0,
+      "top_acoustic_deviations": {
+        "RPDE": -1.485,
+        "MDVP:Flo(Hz)": 1.448,
+        "DFA": 0.942
+      }
+    },
+    {
+      "subject_id": "S10",
+      "clinical_status": "Healthy Control",
+      "y_true": 0,
+      "logo_mean_prob": 0.1716,
+      "logo_category_base": "TN",
+      "logo_category_const": "TN",
+      "logo_margin_to_threshold": 0.2984,
+      "sgkf_mean_prob": 0.1623,
+      "sgkf_std_prob": 0.029,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "MDVP:Flo(Hz)": 2.813,
+        "MDVP:Fo(Hz)": 2.197,
+        "DFA": -1.487
+      }
+    },
+    {
+      "subject_id": "S13",
+      "clinical_status": "Healthy Control",
+      "y_true": 0,
+      "logo_mean_prob": 0.5821,
+      "logo_category_base": "FP",
+      "logo_category_const": "FP",
+      "logo_margin_to_threshold": 0.0521,
+      "sgkf_mean_prob": 0.5651,
+      "sgkf_std_prob": 0.061,
+      "sgkf_error_rate_10seeds": 0.8,
+      "top_acoustic_deviations": {
+        "spread1": -1.027,
+        "PPE": -1.02,
+        "MDVP:Fhi(Hz)": -0.977
+      }
+    },
+    {
+      "subject_id": "S16",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.8231,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.4031,
+      "sgkf_mean_prob": 0.8305,
+      "sgkf_std_prob": 0.0317,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "DFA": 1.839,
+        "PPE": 1.494,
+        "D2": -1.383
+      }
+    },
+    {
+      "subject_id": "S17",
+      "clinical_status": "Healthy Control",
+      "y_true": 0,
+      "logo_mean_prob": 0.2013,
+      "logo_category_base": "TN",
+      "logo_category_const": "TN",
+      "logo_margin_to_threshold": 0.3087,
+      "sgkf_mean_prob": 0.2155,
+      "sgkf_std_prob": 0.028,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "spread2": -2.432,
+        "RPDE": -1.732,
+        "MDVP:Fo(Hz)": 1.705
+      }
+    },
+    {
+      "subject_id": "S18",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.789,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.329,
+      "sgkf_mean_prob": 0.7894,
+      "sgkf_std_prob": 0.0471,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "MDVP:Flo(Hz)": -1.33,
+        "Shimmer:APQ3": 0.993,
+        "Shimmer:DDA": 0.993
+      }
+    },
+    {
+      "subject_id": "S19",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.623,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.163,
+      "sgkf_mean_prob": 0.6362,
+      "sgkf_std_prob": 0.0776,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "DFA": 1.47,
+        "D2": -1.171,
+        "MDVP:Fo(Hz)": -1.002
+      }
+    },
+    {
+      "subject_id": "S20",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.7864,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.3264,
+      "sgkf_mean_prob": 0.7923,
+      "sgkf_std_prob": 0.035,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "MDVP:Fhi(Hz)": -1.4,
+        "MDVP:Fo(Hz)": -1.366,
+        "DFA": 1.151
+      }
+    },
+    {
+      "subject_id": "S21",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.8434,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.3834,
+      "sgkf_mean_prob": 0.8623,
+      "sgkf_std_prob": 0.029,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "D2": 2.428,
+        "HNR": -1.892,
+        "spread2": 1.61
+      }
+    },
+    {
+      "subject_id": "S22",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.6614,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.2214,
+      "sgkf_mean_prob": 0.7142,
+      "sgkf_std_prob": 0.0684,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "Shimmer:APQ3": 1.225,
+        "Shimmer:DDA": 1.225,
+        "MDVP:Shimmer": 1.08
+      }
+    },
+    {
+      "subject_id": "S24",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.9358,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.5058,
+      "sgkf_mean_prob": 0.9472,
+      "sgkf_std_prob": 0.0259,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "NHR": 4.291,
+        "MDVP:Jitter(Abs)": 3.727,
+        "Jitter:DDP": 3.626
+      }
+    },
+    {
+      "subject_id": "S25",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.2878,
+      "logo_category_base": "FN",
+      "logo_category_const": "FN",
+      "logo_margin_to_threshold": 0.1422,
+      "sgkf_mean_prob": 0.2853,
+      "sgkf_std_prob": 0.0569,
+      "sgkf_error_rate_10seeds": 1.0,
+      "top_acoustic_deviations": {
+        "RPDE": -1.781,
+        "HNR": 1.486,
+        "spread1": -1.223
+      }
+    },
+    {
+      "subject_id": "S26",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.5006,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.0706,
+      "sgkf_mean_prob": 0.5039,
+      "sgkf_std_prob": 0.0438,
+      "sgkf_error_rate_10seeds": 0.5,
+      "top_acoustic_deviations": {
+        "MDVP:Fo(Hz)": 1.222,
+        "RPDE": -0.775,
+        "D2": 0.65
+      }
+    },
+    {
+      "subject_id": "S27",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.5649,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.1049,
+      "sgkf_mean_prob": 0.5723,
+      "sgkf_std_prob": 0.0335,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "MDVP:Fhi(Hz)": 3.158,
+        "spread2": 1.388,
+        "D2": 1.264
+      }
+    },
+    {
+      "subject_id": "S31",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.6589,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.2289,
+      "sgkf_mean_prob": 0.6907,
+      "sgkf_std_prob": 0.0733,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "spread2": -1.366,
+        "D2": -1.292,
+        "RPDE": 1.051
+      }
+    },
+    {
+      "subject_id": "S32",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.4077,
+      "logo_category_base": "FN",
+      "logo_category_const": "FN",
+      "logo_margin_to_threshold": 0.0323,
+      "sgkf_mean_prob": 0.3929,
+      "sgkf_std_prob": 0.0383,
+      "sgkf_error_rate_10seeds": 1.0,
+      "top_acoustic_deviations": {
+        "MDVP:Fhi(Hz)": -1.108,
+        "Shimmer:APQ3": -1.083,
+        "Shimmer:DDA": -1.083
+      }
+    },
+    {
+      "subject_id": "S33",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.8574,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.4274,
+      "sgkf_mean_prob": 0.8635,
+      "sgkf_std_prob": 0.0271,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "RPDE": 1.465,
+        "MDVP:Fhi(Hz)": -1.093,
+        "Shimmer:APQ5": 1.048
+      }
+    },
+    {
+      "subject_id": "S34",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.6363,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.2163,
+      "sgkf_mean_prob": 0.6386,
+      "sgkf_std_prob": 0.0303,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "DFA": -1.423,
+        "MDVP:Fo(Hz)": 1.15,
+        "spread2": 1.023
+      }
+    },
+    {
+      "subject_id": "S35",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.9667,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.4967,
+      "sgkf_mean_prob": 0.949,
+      "sgkf_std_prob": 0.0277,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "MDVP:APQ": 3.816,
+        "MDVP:PPQ": 3.613,
+        "MDVP:Shimmer(dB)": 3.453
+      }
+    },
+    {
+      "subject_id": "S37",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.7622,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.3922,
+      "sgkf_mean_prob": 0.8177,
+      "sgkf_std_prob": 0.0328,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "DFA": -1.331,
+        "spread1": 1.299,
+        "RPDE": 1.28
+      }
+    },
+    {
+      "subject_id": "S39",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.7807,
+      "logo_category_base": "TP",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.4207,
+      "sgkf_mean_prob": 0.7846,
+      "sgkf_std_prob": 0.0359,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "RPDE": 1.412,
+        "MDVP:Fhi(Hz)": -0.992,
+        "MDVP:Fo(Hz)": -0.963
+      }
+    },
+    {
+      "subject_id": "S42",
+      "clinical_status": "Healthy Control",
+      "y_true": 0,
+      "logo_mean_prob": 0.2989,
+      "logo_category_base": "TN",
+      "logo_category_const": "TN",
+      "logo_margin_to_threshold": 0.2011,
+      "sgkf_mean_prob": 0.3069,
+      "sgkf_std_prob": 0.044,
+      "sgkf_error_rate_10seeds": 0.0,
+      "top_acoustic_deviations": {
+        "MDVP:Fo(Hz)": 2.008,
+        "MDVP:Flo(Hz)": 1.864,
+        "spread1": -1.267
+      }
+    },
+    {
+      "subject_id": "S43",
+      "clinical_status": "Healthy Control",
+      "y_true": 0,
+      "logo_mean_prob": 0.5404,
+      "logo_category_base": "FP",
+      "logo_category_const": "FP",
+      "logo_margin_to_threshold": 0.0304,
+      "sgkf_mean_prob": 0.55,
+      "sgkf_std_prob": 0.0719,
+      "sgkf_error_rate_10seeds": 0.6,
+      "top_acoustic_deviations": {
+        "D2": -1.287,
+        "RPDE": -1.168,
+        "MDVP:Fhi(Hz)": -1.099
+      }
+    },
+    {
+      "subject_id": "S44",
+      "clinical_status": "Parkinson's",
+      "y_true": 1,
+      "logo_mean_prob": 0.4521,
+      "logo_category_base": "FN",
+      "logo_category_const": "TP",
+      "logo_margin_to_threshold": 0.1821,
+      "sgkf_mean_prob": 0.4643,
+      "sgkf_std_prob": 0.0505,
+      "sgkf_error_rate_10seeds": 0.8,
+      "top_acoustic_deviations": {
+        "RPDE": -1.219,
+        "DFA": 0.818,
+        "Shimmer:DDA": -0.677
+      }
+    },
+    {
+      "subject_id": "S49",
+      "clinical_status": "Healthy Control",
+      "y_true": 0,
+      "logo_mean_prob": 0.5542,
+      "logo_category_base": "FP",
+      "logo_category_const": "FP",
+      "logo_margin_to_threshold": 0.0842,
+      "sgkf_mean_prob": 0.5496,
+      "sgkf_std_prob": 0.0409,
+      "sgkf_error_rate_10seeds": 1.0,
+      "top_acoustic_deviations": {
+        "MDVP:Fhi(Hz)": 1.692,
+        "DFA": -1.048,
+        "spread2": -0.948
+      }
+    },
+    {
+      "subject_id": "S50",
+      "clinical_status": "Healthy Control",
+      "y_true": 0,
+      "logo_mean_prob": 0.6684,
+      "logo_category_base": "FP",
+      "logo_category_const": "FP",
+      "logo_margin_to_threshold": 0.1984,
+      "sgkf_mean_prob": 0.6695,
+      "sgkf_std_prob": 0.0472,
+      "sgkf_error_rate_10seeds": 1.0,
+      "top_acoustic_deviations": {
+        "MDVP:Fhi(Hz)": 1.248,
+        "MDVP:Fo(Hz)": 1.018,
+        "DFA": -0.992
+      }
+    }
+  ]
+}

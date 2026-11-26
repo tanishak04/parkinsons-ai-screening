@@ -1,0 +1,19 @@
+{
+  "stage": "stage_4_1_statistical_uncertainty_audit",
+  "sample_size": 32,
+  "pd_count": 24,
+  "hc_count": 8,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 42,
+  "stratification": "class_stratified_participant_level",
+  "confidence_level": 0.95,
+  "thresholds_evaluated": [
+    0.5,
+    0.45
+  ],
+  "runtime_libraries": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "scipy-available"
+  }
+}
